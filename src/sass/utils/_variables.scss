@@ -1,0 +1,19 @@
+$colors: (
+  // text
+  'accentTextColor': #d41443,
+  'primaryTextColor': #ffffff,
+  'secondaryTextColor': #ffa5ba,
+  'textColor': #000000,
+  'otherTextColor': #907e82,
+  // background
+  'primaryBackgroundColor': #fff5f6,
+  'accentBackgroundColor': #ffb8ca,
+  'otherBackgroundColor1': #e17992,
+  'otherBackgroundColor2': #f0d1a5,
+  'otherBackgroundColor3': #c2e297,
+  'whiteColor': #ffffff,
+  'btnhover': #ecebeb
+);
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
