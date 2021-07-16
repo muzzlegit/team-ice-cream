@@ -1,0 +1,39 @@
+@mixin dis-al($dis, $al) {
+  display: $dis;
+  align-items: $al;
+}
+// @include dis-al(inline-flex, center);
+
+@mixin dis-jc($dis, $al, $jc) {
+  display: $dis;
+  align-items: $al;
+  justify-content: $jc;
+}
+// @include dis-jc($dis, $al, $jc)
+@mixin font-line($fs, $lh) {
+  font-size: $fs;
+  line-height: $lh;
+}
+// @include font-line($fs, $lh);
+
+@mixin font($fw, $fs, $lh, $ls) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+// @include font($fw, $fs, $lh, $ls);
+
+@mixin font-letter($fs, $lh, $ls) {
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+// @include font-letter($fs, $lh, $ls);
+
+@mixin font-weight($fw, $fs, $lh) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+}
+// @include font-weight($fw, $fs, $lh);
