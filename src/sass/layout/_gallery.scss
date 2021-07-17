@@ -9,8 +9,17 @@
   }
   &__item {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
+  &__item--center {
+    justify-content: center;
+  }
+  &__item--second {
+    justify-content: flex-start;
+    padding-top: 25px;
+  }
+
   &__img {
+    margin: 1px;
   }
 }
