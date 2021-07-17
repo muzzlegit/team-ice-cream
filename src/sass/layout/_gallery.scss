@@ -1,7 +1,8 @@
 .gallery {
   background-image: linear-gradient(
-    getColor('primaryBackgroundColor') 50%,
-    getColor('whiteColor') 50%
+    getColor('primaryBackgroundColor') 40%,
+    getColor('whiteColor') 40%,
+    getColor('whiteColor') 60%
   );
   &__list {
     display: flex;
@@ -11,15 +12,66 @@
     display: flex;
     flex-direction: column;
   }
-  &__item--center {
+  &__item--first {
     justify-content: center;
   }
   &__item--second {
     justify-content: flex-start;
     padding-top: 25px;
+    @media screen and (min-width: $tablet) {
+      padding-top: 54px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding-top: 87px;
+    }
   }
-
+  &__item--third {
+    justify-content: flex-start;
+  }
+  &__item--fourth {
+    justify-content: flex-start;
+    padding-top: 29px;
+    @media screen and (min-width: $tablet) {
+      padding-top: 61px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding-top: 100px;
+    }
+  }
+  &__item--fifth {
+    justify-content: flex-start;
+    padding-top: 15px;
+    @media screen and (min-width: $tablet) {
+      padding-top: 33px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding-top: 52px;
+    }
+  }
   &__img {
+    border-radius: 4px;
+    overflow: hidden;
     margin: 1px;
+    @media screen and (min-width: $tablet) {
+      margin: 2px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin: 4px;
+    }
+  }
+  &__img:hover,
+  &__img:focus {
+    animation: flip;
+    animation-duration: 2s;
+    @media screen and (min-width: $tablet) {
+      animation: rotateIn;
+      animation-duration: 2s;
+    }
+    @media screen and (min-width: $desktop) {
+      animation: bounceIn;
+      animation-duration: 2s;
+
+      margin: 4px;
+    }
   }
 }
