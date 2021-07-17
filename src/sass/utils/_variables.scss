@@ -1,22 +1,24 @@
 $colors: (
   // text
-  'accentTextColor': #d41443,
-  'primaryTextColor': #ffffff,
-  'secondaryTextColor': #ffa5ba,
-  'textColor': #000000,
-  'otherTextColor': #907e82,
+  'accent-text-color': #d41443,
+  'primary-text-color': #ffffff,
+  'secondary-text-color': #ffa5ba,
+  'text-color': #000000,
+  'other-text-color': #907e82,
   // background
-  'primaryBackgroundColor': #fff5f6,
-  'accentBackgroundColor': #ffb8ca,
-  'otherBackgroundColor1': #e17992,
-  'otherBackgroundColor2': #f0d1a5,
-  'otherBackgroundColor3': #c2e297,
-  'whiteColor': #ffffff,
-  'btnhover': #ecebeb
+  'primary-background-color': #fff5f6,
+  'accent-background-color': #ffb8ca,
+  'other-background-color1': #e17992,
+  'other-background-color2': #f0d1a5,
+  'other-background-color3': #c2e297,
+  'white-color': #ffffff,
+  'btn-hover': #ecebeb
 );
 @function getColor($key) {
   @return map-get($colors, $key);
 }
+//color: getColor('textColor');
+
 // breakpoints
 $mobile: 480px;
 $tablet: 768px;

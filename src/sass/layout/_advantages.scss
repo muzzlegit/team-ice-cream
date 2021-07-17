@@ -1,0 +1,110 @@
+.advantages {
+  background-color: getColor('primary-background-color');
+  padding-top: 66px;
+  padding-bottom: 97px;
+}
+
+.advantages__container {
+  @media screen and (min-width: $tablet) {
+    padding-left: 36px;
+    padding-right: 76px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-left: 115px;
+    padding-right: 115px;
+  }
+}
+.advantages__list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+}
+
+.advantages__list-item {
+  position: relative;
+  width: 230px;
+
+  @media screen and (max-width: 767.3px) {
+    &:not(:last-child) {
+      margin-bottom: 104px;
+    }
+
+  }
+     
+  @media screen and (min-width: $tablet) {
+    
+    width: calc((100% - 120px) / 3);
+    margin-bottom: 136px;
+      
+    &:not(:last-child) {
+        margin-right: 60px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 60px) / 3);
+    margin-bottom: 139px;
+  }
+
+}
+
+.list-item-first::before {
+  content: "";
+  background-image: url(/images/icons/Advantages-icon1.png);
+  position: absolute;
+  top: -66px;
+  width: 33px;
+  height: 50px;
+  
+}
+
+.list-item-second::before {
+  content: "";
+  background-image: url(/images/icons/Advantages-icon2.png);
+  position: absolute;
+  top: -66px;
+  width: 50px;
+  height: 50px;
+  
+}
+.list-item-third::before {
+  content: "";
+  background-image: url(/images/icons/Advantages-icon3.png);
+  position: absolute;
+  top: -66px;
+  width: 44px;
+  height: 50px;
+  
+}
+
+.advantages__number {
+  font-family: Titan One, sans-serif;
+  font-weight: 400;
+  @include font-letter(36px, 1.145, 0.04em);
+  color: getColor('accent-text-color');
+  text-transform: uppercase;
+  margin-bottom: 13px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 48px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 58px;
+  }
+}
+
+.advantages__text {
+  @include font-weight(700, 12px, 1.7);
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 1.74;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 1.76;
+    letter-spacing: .02em;
+  }
+}
