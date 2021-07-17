@@ -1,0 +1,16 @@
+.gallery {
+  background-image: linear-gradient(
+    getColor('primaryBackgroundColor') 50%,
+    getColor('whiteColor') 50%
+  );
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    display: flex;
+    flex-direction: row;
+  }
+  &__img {
+  }
+}
