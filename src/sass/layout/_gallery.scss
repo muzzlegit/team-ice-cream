@@ -1,156 +1,77 @@
 .gallery {
-  height: 129px;
-
   background-image: linear-gradient(
-    getColor('primaryBackgroundColor') 50%,
-    getColor('whiteColor') 50%
+    getColor('primaryBackgroundColor') 40%,
+    getColor('whiteColor') 40%,
+    getColor('whiteColor') 60%
   );
-  @media screen and (min-width: $tablet) {
-    height: 264px;
-  }
-  @media screen and (min-width: $desktop) {
-    height: 430px;
-  }
-  &__container {
-    position: relative;
-  }
   &__list {
+    display: flex;
+    justify-content: center;
   }
   &__item {
+    display: flex;
+    flex-direction: column;
   }
-
-  &__img--first {
-    top: 40px;
-    left: 75px;
+  &__item--first {
+    justify-content: center;
+  }
+  &__item--second {
+    justify-content: flex-start;
+    padding-top: 25px;
     @media screen and (min-width: $tablet) {
-      top: 87px;
-      left: 74px;
+      padding-top: 54px;
     }
     @media screen and (min-width: $desktop) {
-      top: 40px;
-      left: 21px;
+      padding-top: 87px;
     }
   }
-  &__img--second {
-    top: 24px;
-    left: 62px;
+  &__item--third {
+    justify-content: flex-start;
+  }
+  &__item--fourth {
+    justify-content: flex-start;
+    padding-top: 29px;
     @media screen and (min-width: $tablet) {
-      top: 54px;
-      left: 163px;
+      padding-top: 61px;
     }
     @media screen and (min-width: $desktop) {
-      top: 40px;
-      left: 21px;
+      padding-top: 100px;
     }
   }
-  &__img--third {
-    top: 66px;
-    left: 62px;
+  &__item--fifth {
+    justify-content: flex-start;
+    padding-top: 15px;
     @media screen and (min-width: $tablet) {
-      top: 143px;
-      left: 163px;
+      padding-top: 33px;
     }
     @media screen and (min-width: $desktop) {
-      top: 40px;
-      left: 21px;
-    }
-  }
-  &__img--fourth {
-    top: 0px;
-    left: 103px;
-    @media screen and (min-width: $tablet) {
-      top: 0px;
-      left: 252px;
-    }
-    @media screen and (min-width: $desktop) {
-      top: 0px;
-      left: 0px;
-    }
-  }
-  &__img--fifth {
-    top: 82px;
-    left: 103px;
-    @media screen and (min-width: $tablet) {
-      top: 178px;
-      left: 252px;
-    }
-    @media screen and (min-width: $desktop) {
-      top: 61px;
-      left: 21px;
-    }
-  }
-  &__img--sixht {
-    top: 28px;
-    left: 185px;
-    @media screen and (min-width: $tablet) {
-      top: 61px;
-      left: 430px;
-    }
-    @media screen and (min-width: $desktop) {
-      top: 33px;
-      left: 21px;
-    }
-  }
-  &__img--seventh {
-    top: 69px;
-    left: 185px;
-    @media screen and (min-width: $tablet) {
-      top: 150px;
-      left: 430px;
-    }
-    @media screen and (min-width: $desktop) {
-      top: 40px;
-      left: 21px;
-    }
-  }
-  &__img--eighth {
-    top: 15px;
-    left: 226px;
-    @media screen and (min-width: $tablet) {
-      top: 33px;
-      left: 519px;
-    }
-    @media screen and (min-width: $desktop) {
-      top: 92px;
-      left: 21px;
-    }
-  }
-  &__img--ninth {
-    top: 56px;
-    left: 226px;
-    @media screen and (min-width: $tablet) {
-      top: 122px;
-      left: 519px;
-    }
-    @media screen and (min-width: $desktop) {
-      top: 40px;
-      left: 21px;
-    }
-  }
-  &__img--tenth {
-    top: 40px;
-    left: 267px;
-    @media screen and (min-width: $tablet) {
-      top: 87px;
-      left: 608px;
-    }
-    @media screen and (min-width: $desktop) {
-      top: 40px;
-      left: 21px;
+      padding-top: 52px;
     }
   }
   &__img {
-    position: absolute;
-    top: 0;
-    left: 0;
     border-radius: 4px;
     overflow: hidden;
     margin: 1px;
+    @media screen and (min-width: $tablet) {
+      margin: 2px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin: 4px;
+    }
   }
   &__img:hover,
   &__img:focus {
-    transform: rotate(10deg);
-    box-shadow: 0px 3px 5px getColor('accentTextColor'), 0px 2px 1px getColor('textColor');
-    transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+    animation: flip;
+    animation-duration: 2s;
+    @media screen and (min-width: $tablet) {
+      animation: rotateIn;
+      animation-duration: 2s;
+    }
+    @media screen and (min-width: $desktop) {
+      animation: bounceIn;
+      animation-duration: 2s;
+
+      margin: 4px;
+    }
   }
 }
