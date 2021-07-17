@@ -2,6 +2,9 @@ body {
   font-family: DM Sans, sans-serif;
   font-size: 16px;
   letter-spacing: 0.03em;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 
   color: getColor('textColor');
   background-color: getColor('whiteColor');

@@ -1,0 +1,122 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 1px solid blue;
+  //   background-color: rgb(226, 88, 88);
+}
+.container-wraper {
+  max-width: 1200px;
+  padding-top: 6px;
+  padding-left: 0;
+  padding-right: 0;
+  height: 100%;
+  @media screen and (min-width: 768px) {
+    padding-top: 37px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  margin-right: auto;
+  margin-left: 20px;
+  @media screen and (min-width: 768px) {
+    margin-left: 34px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-right: 0;
+    margin-left: 46px;
+  }
+}
+
+.header__button--open-menu {
+  margin-right: 20px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  @media screen and (min-width: 768px) {
+    margin-right: 30px;
+    @media screen and (min-width: 1280px) {
+      display: none;
+    }
+  }
+}
+
+.header__button-buy {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  display: none;
+  display: flex;
+  margin-right: 34px;
+  align-items: center;
+  padding: 12px 37px;
+  border: none;
+  border-radius: 22px;
+  color: #d41443;
+  background: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  @media screen and (min-width: 1280px) {
+    margin-right: 115px;
+  }
+  &:hover,
+  &:focus {
+    background-color: #e5e5e5;
+  }
+}
+.header__icon {
+  margin-left: 12px;
+}
+
+//  desk menu
+.header__list-desk {
+  display: none;
+
+  @media screen and (min-width: 1280px) {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.header__item-desk {
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
+
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+}
+
+.header__link-desk {
+  font-family: DM Sans, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  text-decoration: none;
+  color: #fff;
+  transition: color 250ms linear;
+
+  &:hover,
+  &:focus {
+    color: #d41443;
+  }
+}

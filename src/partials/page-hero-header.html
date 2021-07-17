@@ -1,6 +1,118 @@
-<header>
+<header class="header">
+  <div class="container-wraper container">
+    <div class="header__menu">
+      <!-- logo -->
 
+      <a class="header__logo logo" href="#">
+        <img src="./images/icons/logo.svg" alt="Логотип" />
+      </a>
+
+      <!-- desk menu -->
+
+      <ul class="menu-list__pc header__list-desk list">
+        <li class="menu-list__item-pc header__item-desk item">
+          <a class="menu-list__link-pc scrollto header__link-desk link" href="#header">Home</a>
+        </li>
+        <li class="menu-list__item-pc header__item-desk item">
+          <a class="menu-list__link-pc scrollto header__link-desk link" href="#products"
+            >About us</a
+          >
+        </li>
+        <li class="menu-list__item-pc header__item-desk item">
+          <a class="menu-list__link-pc scrollto header__link-desk link" href="#benefits"
+            >How it’s made?</a
+          >
+        </li>
+        <li class="menu-list__item-pc header__item-desk item">
+          <a class="menu-list__link-pc scrollto header__link-desk link" href="#testimonials"
+            >Our products</a
+          >
+        </li>
+        <li class="menu-list__item-pc header__item-desk item">
+          <a class="menu-list__link-pc scrollto header__link-desk link" href="#page-footer"
+            >Contact</a
+          >
+        </li>
+      </ul>
+
+      <button class="header__button header__button--open-menu" type="button" data-modal-open="">
+        <svg class="menu__svg" width="20" height="12">
+          <use href="./images/icons/icons.svg#burger-menu-icon"></use>
+        </svg>
+      </button>
+
+      <button class="header__button header__button-buy">
+        Buy now
+        <svg class="header__icon" width="4" height="12">
+          <use href="./images/icons/icons.svg#read-more-icon" read-more-icon></use>
+        </svg>
+      </button>
+
+      <!-- mob menu  -->
+
+      <!-- <ul class="menu-list header__list list">
+        <li class="menu-list__item header__item item">
+          <a class="menu-list__link scrollto header__link header__link" href="#header">Home</a>
+        </li>
+        <li class="menu-list__item header__item item">
+          <a class="menu-list__link scrollto header__link header__link" href="#products"
+            >About us</a
+          >
+        </li>
+        <li class="menu-list__item header__item item">
+          <a class="menu-list__link scrollto header__link header__link" href="#benefits"
+            >How it’s made?</a
+          >
+        </li>
+        <li class="menu-list__item header__item item">
+          <a class="menu-list__link scrollto header__link header__link" href="#testimonials"
+            >Our products</a
+          >
+        </li>
+        <li class="menu-list__item header__item item">
+          <a class="menu-list__link scrollto header__link header__link" href="#page-footer"
+            >Contact</a
+          >
+        </li>
+      </ul> -->
+    </div>
+  </div>
 </header>
 
+<section class="hero">
+  <div class="hero__container container">
+    <picture>
+      <source
+        srcset="
+          ./images/desktop/hero/hero-ice-cream.png    1x,
+          ./images/desktop/hero/hero-ice-cream-x2.png 2x
+        "
+        media="(min-width: 1280px)"
+        type="image/png"
+      />
+      <source
+        srcset="
+          ./images/tablet/hero/hero-ice-cream.png    1x,
+          ./images/tablet/hero/hero-ice-cream-x2.png 2x
+        "
+        media="(min-width: 768px)"
+        type="image/png"
+      />
+      <source
+        srcset="
+          ./images/mobile/hero/hero-ice-cream.png    1x,
+          ./images/mobile/hero/hero-ice-cream-x2.png 2x
+        "
+        media="(max-width: 320px)"
+        type="image/png"
+      />
 
+      <img class="hero__ice" src="./images/mobile/hero/hero-ice-cream.png" alt="Мороженное" />
 
+      <sourse srcset="./images/heroEllips/ellipse.png 1x, ./images/heroEllips/ellipse@2x.png 2x" type="img/png">    
+      <img class="hero__ellipse" src="./images/heroEllips/ellipse.png" alt="ellipse" />
+    </picture>
+
+  
+  </div>
+</section>

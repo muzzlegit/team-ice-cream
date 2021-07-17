@@ -1,0 +1,61 @@
+.hero {
+  background: #ffb8ca;
+  height: 502px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 768px) {
+    height: 399px;
+  }
+  @media screen and (min-width: 1280px) {
+    height: 665px;
+  }
+}
+.hero__ice {
+  position: absolute;
+  width: 171px;
+  height: 410px;
+  margin-left: 117px;
+  margin-top: 92px;
+  margin-right: 32px;
+  z-index: 2;
+
+  @media screen and (min-width: 768px) {
+    width: 143px;
+    height: 336px;
+    margin-left: 378px;
+    margin-top: 63px;
+    margin-right: 247px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 236px;
+    height: 557px;
+    margin-left: 594px;
+    margin-top: 108px;
+    margin-right: 450px;
+  }
+}
+.hero__ellipse {
+  width: 346px;
+  height: 344px;
+  position: absolute;
+  margin-bottom: 75px;
+  margin-top: 83px;
+  margin-left: 36px;
+
+  @media screen and (min-width: 768px) {
+    width: 324px;
+    height: 322px;
+    margin-bottom: 31px;
+    margin-right: 137px;
+    margin-top: 46px;
+    margin-left: 307px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 538px;
+    height: 538px;
+    margin-bottom: 52px;
+    margin-right: 267px;
+    margin-top: 75px;
+    margin-left: 475px;
+  }
+}
