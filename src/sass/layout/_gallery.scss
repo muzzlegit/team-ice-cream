@@ -1,8 +1,8 @@
 .gallery {
   background-image: linear-gradient(
-    getColor('primaryBackgroundColor') 40%,
-    getColor('whiteColor') 40%,
-    getColor('whiteColor') 60%
+    getColor('primary-background-color') 40%,
+    getColor('white-color') 40%,
+    getColor('white-color') 60%
   );
   &__list {
     display: flex;
