@@ -1,0 +1,211 @@
+.backdrop {
+  @media screen and (max-width: 767px) {
+    padding: 94px 15px;
+  }
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  // background-color: rgba(240, 209, 165, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: relative;
+  display: block;
+
+  background-image: radial-gradient(
+    circle at top right,
+    getColor('accent-background-color') 20%,
+    getColor('primary-background-color') 50%
+  );
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 40px;
+
+  @media screen and (min-width: 480px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 450px;
+    transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.01);
+  }
+}
+
+.request-form {
+  display: flex;
+  flex-direction: column;
+
+  &.is-open &__title {
+    animation-name: bounceIn;
+    animation-delay: 700ms;
+    animation-duration: 1000ms;
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    text-align: center;
+
+    @include font(700, 20px, 1.5, inherit);
+
+    font-family: Titan One, sans-serif;
+    color: getColor('accent-text-color');
+    text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.85);
+  }
+  &__description {
+    margin-top: 0;
+    margin-bottom: 12px;
+    text-align: center;
+
+    @include font(normal, 16px, 1.5, inherit);
+    color: getColor('text-color');
+  }
+  &__field {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 4px;
+    @include font-line(16px, 1.2);
+
+    color: getColor('text-color');
+  }
+  &__input {
+    display: block;
+    height: 40px;
+    width: 100%;
+    padding: 11px 12px 11px 40px;
+
+    border: 1px solid getColor('other-background-color1');
+    border-radius: 4px;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__field:focus-within &__input {
+    border-color: getColor('accent-text-color');
+    outline: none;
+  }
+  &__field:focus-within &__textarea {
+    border-color: getColor('accent-text-color');
+    outline: none;
+  }
+  &__field:focus-within &__icon {
+    fill: getColor('accent-text-colo');
+  }
+  &__icon {
+    position: absolute;
+    top: 43px;
+    left: 12px;
+    fill: getColor('accent-text-color');
+
+    transform: translate(0%, -50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__textarea {
+    display: block;
+    resize: none;
+    height: 120px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px 16px;
+
+    border: 1px solid getColor('other-background-color1');
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__textarea::placeholder {
+    @include font-line(12px, 1.2);
+
+    color: getColor('accent-background-color');
+  }
+  &__agreement {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__text {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    @include font-line(12px, 1.67);
+
+    color: getColor('accent-text-colo');
+    @media screen and(min-width:1200px) {
+      @include font-line(14px, 1.7);
+    }
+  }
+  &__link:focus-within {
+    border: 1px solid getColor('accent-text-colo');
+    border-radius: 4px;
+    outline: none;
+  }
+  &__link {
+    text-decoration: underline;
+    @include font-line(12px, 1.67);
+
+    color: getColor('accent-text-color');
+    text-decoration-line: underline;
+    @media screen and(min-width:1200px) {
+      @include font-line(14px, 1.7);
+    }
+  }
+  &__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  &__checkbox:checked ~ &__check-icon {
+    fill: getColor('primary-text-color');
+    background-color: getColor('accent-text-color');
+    border-color: getColor('accent-text-color');
+  }
+
+  &__check-icon {
+    display: inline-block;
+    margin-right: 8px;
+    fill: transparent;
+
+    border: 2px solid getColor('accent-background-color');
+    border-radius: 2px;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms,
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1) 400ms;
+  }
+  &__check-icon:hover,
+  &__check-icon:focus {
+    cursor: pointer;
+  }
+  &__submit {
+    display: flex;
+    justify-content: center;
+  }
+}

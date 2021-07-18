@@ -63,15 +63,5 @@
   &__img:focus {
     animation: flip;
     animation-duration: 2s;
-    @media screen and (min-width: $tablet) {
-      animation: rotateIn;
-      animation-duration: 2s;
-    }
-    @media screen and (min-width: $desktop) {
-      animation: bounceIn;
-      animation-duration: 2s;
-
-      margin: 4px;
-    }
   }
 }
