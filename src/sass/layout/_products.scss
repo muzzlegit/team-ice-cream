@@ -16,6 +16,12 @@
 }
 .container__section-title--products {
   margin-bottom: 144px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 150px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 259px;
+  }
 }
 .products-list {
   margin-bottom: -130px;
@@ -23,6 +29,7 @@
   text-align: center;
   @media screen and (min-width: $tablet) {
     display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -31,22 +38,22 @@
   margin-bottom: 130px;
 
   margin-left: auto;
-  margin-right: auto;
+  margin-right: -20px;
   background-color: getColor('accentBackgroundColor');
   border-radius: 24px;
   width: 280px;
   height: 485px;
-  // bcg media
-  // text-align: center;
-  // @media screen and (min-width: $tablet) {
-  //   width: 220px;
-  //   flex-basis: calc((100% - 60px) / 3);
-  //   margin-right: 20px;
-  // }
-  // @media screen and (min-width: $desktop) {
-  //   width: 330px;
-  //   height: 525px;
-  // }
+
+  @media screen and (min-width: $tablet) {
+    width: 220px;
+
+    // flex-basis: calc((100% - 60px) / 3);
+    margin-right: 20px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 330px;
+    height: 525px;
+  }
 }
 .products-list__item:nth-child(1) {
   background-color: getColor('accentBackgroundColor');
@@ -74,12 +81,16 @@
   top: -113px;
   left: 50%;
   transform: translateX(-50%);
-  // @media screen and (min-width: $tablet) {
-  //   width: 2209px;
-  //   height: 233px;
-  //   top: -111px;
-  //   left: 0;
-  // }
+  @media screen and (min-width: $tablet) {
+    width: 220px;
+    height: 233px;
+    top: -111px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 335px;
+    height: 335px;
+    top: -210px;
+  }
 }
 .products-list__item:nth-child(2)::before {
   background-image: url(./../images/mobile/products/ice-coffee.png);
@@ -129,18 +140,21 @@
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  // width: 200px;
+  padding-left: 40px;
+  padding-right: 40px;
 
   color: getColor('primaryTextColor');
   @include font(700, 14px, 1.52, 0.04em);
   @media screen and (min-width: $tablet) {
     margin-bottom: 40px;
-    // width: 198px;
+    padding-left: 11px;
+    padding-right: 11px;
     @include font(700, 14px, 1.76, 0.04em);
   }
   @media screen and (min-width: $desktop) {
     margin-bottom: 62px;
-    // width: 241px;
+    padding-left: 44px;
+    padding-right: 44px;
     @include font(700, 16px, 1.76, 0.04em);
   }
 }
