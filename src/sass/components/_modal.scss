@@ -17,6 +17,7 @@
   transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
   &.is-hidden {
     opacity: 0;
+    transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
   }
 }
@@ -40,9 +41,6 @@
     width: 450px;
   }
   @media screen and (min-width: $tablet) {
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -53,7 +51,8 @@
   }
 
   .backdrop.is-hidden & {
-    transform: translate(-50%, -50%) scale(0.01);
+    opacity: 1;
+    transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
