@@ -59,3 +59,128 @@
     margin-left: 475px;
   }
 }
+
+.hero__girl {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  width: 168px;
+  height: 133px;
+  position: absolute;
+  margin-top: 266px;
+  margin-left: 566px;
+  z-index: 6;
+  @media screen and (min-width: 1280px) {
+    width: 293px;
+    height: 232px;
+    margin-top: 433px;
+    margin-right: 119px;
+  }
+}
+
+.hero__title {
+  position: relative;
+  padding-top: 193px;
+  font-family: Titan One;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.54;
+  letter-spacing: 0.04em;
+  color: #fff;
+  z-index: 5;
+  @media screen and (min-width: 768px) {
+    padding-top: 102px;
+    font-size: 22px;
+    line-height: 1.136;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-top: 171px;
+    font-size: 38px;
+    line-height: 1.158;
+  }
+}
+.hero__span-title {
+  font-size: 48px;
+  line-height: 0.965;
+  color: #d41443;
+}
+.hero__list {
+  display: flex;
+  margin-top: 19px;
+  position: relative;
+  z-index: 5;
+  @media screen and (min-width: 768px) {
+    margin-top: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: 25px;
+  }
+}
+
+.hero__link {
+  min-width: 63px;
+  min-height: 24px;
+  display: block;
+  text-align: center;
+  align-items: center;
+  font-family: DM Sans, sans-serif;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  color: #fff;
+  background-color: #d41443;
+  border: none;
+  border-radius: 20px;
+  padding: 7px 15px;
+  margin-right: 8px;
+  @media screen and (min-width: 1280px) {
+    min-width: 104px;
+    min-height: 40px;
+    margin-right: 15px;
+    padding: 11px 22px;
+    font-size: 14px;
+    line-height: 1.27;
+  }
+}
+.hero__link:hover,
+.hero__link:focus {
+  color: #d41443;
+  background-color: #fff;
+}
+.hero__link--made {
+  min-width: 83px;
+  color: #d41443;
+  background-color: #fff;
+  @media screen and (min-width: 1280px) {
+    min-width: 138px;
+  }
+}
+.hero__link--made:hover,
+.hero__link--made:focus {
+  color: #fff;
+  background-color: #d41443;
+}
+.hero__text {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  width: 124px;
+  height: 48px;
+  margin-top: 66px;
+  margin-left: 120px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.5;
+  color: #ffffff;
+  @media screen and (min-width: 1280px) {
+    width: 200px;
+    font-weight: 400;
+    margin-top: 112px;
+    margin-left: 183px;
+    font-size: 14px;
+    line-height: 1.42;
+  }
+}

@@ -44,37 +44,9 @@
       <button class="header__button header__button-buy">
         Buy now
         <svg class="header__icon" width="4" height="12">
-          <use href="./images/icons/icons.svg#read-more-icon" read-more-icon></use>
+          <use href="./images/icons/icons.svg#read-more-icon"></use>
         </svg>
       </button>
-
-      <!-- mob menu  -->
-
-      <!-- <ul class="menu-list header__list list">
-        <li class="menu-list__item header__item item">
-          <a class="menu-list__link scrollto header__link header__link" href="#header">Home</a>
-        </li>
-        <li class="menu-list__item header__item item">
-          <a class="menu-list__link scrollto header__link header__link" href="#products"
-            >About us</a
-          >
-        </li>
-        <li class="menu-list__item header__item item">
-          <a class="menu-list__link scrollto header__link header__link" href="#benefits"
-            >How it’s made?</a
-          >
-        </li>
-        <li class="menu-list__item header__item item">
-          <a class="menu-list__link scrollto header__link header__link" href="#testimonials"
-            >Our products</a
-          >
-        </li>
-        <li class="menu-list__item header__item item">
-          <a class="menu-list__link scrollto header__link header__link" href="#page-footer"
-            >Contact</a
-          >
-        </li>
-      </ul> -->
     </div>
   </div>
 </header>
@@ -106,13 +78,52 @@
         media="(max-width: 320px)"
         type="image/png"
       />
-
       <img class="hero__ice" src="./images/mobile/hero/hero-ice-cream.png" alt="Мороженное" />
-
-      <sourse srcset="./images/heroEllips/ellipse.png 1x, ./images/heroEllips/ellipse@2x.png 2x" type="img/png">    
+    </picture>
+    <picture>
+      <source
+        srcset="./images/heroEllips/ellipse.png 1x, ./images/heroEllips/ellipse@2x.png 2x"
+        type="image/png"
+      />
       <img class="hero__ellipse" src="./images/heroEllips/ellipse.png" alt="ellipse" />
     </picture>
+    <picture>
+      <source
+        srcset="
+          ./images/desktop/hero/girl-with-ice-cream.png    1x,
+          ./images/desktop/hero/girl-with-ice-cream-x2.png 2x
+        "
+        media="(min-width: 1280px)"
+        type="image/png"
+      />
+      <source
+        srcset="
+          ./images/tablet/hero/girl-with-ice-cream.png    1x,
+          ./images/tablet/hero/girl-with-ice-cream-x2.png 2x
+        "
+        media="(min-width: 768px)"
+        type="image/png"
+      />
+      <img class="hero__girl" src="./images/tablet/hero/girl-with-ice-cream.png" alt="Мороженное" />
+    </picture>
 
-  
+    <h1 class="hero__title">
+      Ice cream <br />
+      made with <br />
+      <span class="hero__span-title">passion</span>
+    </h1>
+
+    <ul class="hero__list list">
+      <li class="hero__item item">
+        <a class="hero__link hero__link--products link" href="#">Products</a>
+      </li>
+      <li class="hero__item item">
+        <a class="hero__link hero__link--made link" href="#">How it’s made?</a>
+      </li>
+    </ul>
+    <p class="hero__text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore et
+    </p>
   </div>
 </section>
