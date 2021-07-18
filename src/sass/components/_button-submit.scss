@@ -1,0 +1,23 @@
+.button-submit {
+  @include dis-jc(flex, center, center);
+  display: inline-flex;
+  height: 44px;
+  min-width: 159px;
+  padding: 10px;
+
+  font-weight: 700;
+  @include font-line(14px, 1.87);
+  color: getColor('white-color');
+
+  cursor: pointer;
+  background-color: #d41342;
+  border-color: transparent;
+  border-radius: 22px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: #c7133e;
+  }
+}
