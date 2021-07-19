@@ -7,7 +7,8 @@
   margin-top: 100px;
   @media screen and (min-width: $desktop) {
     background-image: linear-gradient(to bottom, rgba(255, 245, 246, 0.5), rgba(255, 245, 246, 1)),
-      url('../images/desktop/overlay/overlay.jpg');
+      url('../images/desktop/overlay/overlay.png');
+    //   url('../images/desktop/overlay/overlay.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     background-color: rgba(255, 245, 246, 1);
