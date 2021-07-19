@@ -40,6 +40,11 @@
     border: none;
     background: transparent;
     padding: 0;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      background: getColor('other-background-color1');
+    }
     @media screen and (min-width: 768px) {
       margin-right: 30px;
     }
@@ -49,10 +54,10 @@
   }
   &__button-buy {
     @include dis-al(flex, center);
-
     padding: 12px 37px;
     border: none;
     border-radius: 22px;
+    cursor: pointer;
     color: getColor('accent-text-color');
     background: getColor('primary-text-color');
     @include font-weight(700, 16px, 1.31);
@@ -65,11 +70,11 @@
     }
   }
   &__icon {
+    stroke: currentColor;
     margin-left: 12px;
   }
   &__list-desk {
     display: none;
-
     @media screen and (min-width: 1280px) {
       @include dis-al(flex, center);
       flex-direction: row;
@@ -91,7 +96,8 @@
     color: getColor('primary-text-color');
     transition: color 250ms linear;
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       color: getColor('accent-text-color');
     }
   }
@@ -130,9 +136,14 @@
   &__btnClose {
     position: absolute;
     top: 23px;
-    right: 23px;
+    right: 34px;
     border: none;
+    cursor: pointer;
     background: transparent;
+    &:hover,
+    &:focus {
+      background: getColor('accent-background-color');
+    }
     @media screen and (min-width: 768px) {
       top: 23px;
       right: 34px;
