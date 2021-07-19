@@ -1,0 +1,183 @@
+.container-wraper {
+  max-width: 1200px;
+  padding-top: 6px;
+  padding-left: 0;
+  padding-right: 0;
+  height: 100%;
+  @media screen and (min-width: 768px) {
+    padding-top: 37px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  &__menu {
+    @include dis-jc(flex, center, space-between);
+  }
+  &__logo {
+    margin-right: auto;
+    margin-left: 20px;
+    @media screen and (min-width: 768px) {
+      margin-left: 34px;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-right: 0;
+      margin-left: 46px;
+    }
+  }
+  &__button--open-menu {
+    margin-right: 20px;
+    border: none;
+    background: transparent;
+    padding: 0;
+    @media screen and (min-width: 768px) {
+      margin-right: 30px;
+    }
+    @media screen and (min-width: 1280px) {
+      display: none;
+    }
+  }
+  &__button-buy {
+    @include dis-al(flex, center);
+
+    padding: 12px 37px;
+    border: none;
+    border-radius: 22px;
+    color: getColor('accent-text-color');
+    background: getColor('primary-text-color');
+    @include font-weight(700, 16px, 1.31);
+    @media screen and (min-width: 1280px) {
+      margin-right: 115px;
+    }
+    &:hover,
+    &:focus {
+      background-color: getColor('btn-hover');
+    }
+  }
+  &__icon {
+    margin-left: 12px;
+  }
+  &__list-desk {
+    display: none;
+
+    @media screen and (min-width: 1280px) {
+      @include dis-al(flex, center);
+      flex-direction: row;
+    }
+  }
+  &__item-desk {
+    display: none;
+    @media screen and (min-width: 1200px) {
+      display: block;
+      &:not(:last-child) {
+        margin-right: 35px;
+      }
+    }
+  }
+  &__link-desk {
+    font-family: DM Sans, sans-serif;
+    @include font-weight(700, 16px, 1.31);
+    text-decoration: none;
+    color: getColor('primary-text-color');
+    transition: color 250ms linear;
+    &:hover,
+    &:focus {
+      color: getColor('accent-text-color');
+    }
+  }
+}
+
+.buttonBuyHeader {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  background: getColor('other-background-color1');
+  padding-top: 60px;
+  padding-bottom: 171px;
+  width: 250px;
+  opacity: 1;
+  transition: opacity 250ms linear;
+  @media screen and (min-width: 768px) {
+    width: 254px;
+    right: 0;
+    padding-top: 60px;
+    padding-bottom: 689px;
+  }
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  &__btnClose {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    border: none;
+    background: transparent;
+    @media screen and (min-width: 768px) {
+      top: 23px;
+      right: 34px;
+    }
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    border-top: 1px solid #e18298;
+    &:last-child {
+      border-bottom: 1px solid #e18298;
+    }
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 24px;
+      border-top: 1px solid #e18298;
+      &:last-child {
+        border-bottom: 1px solid #e18298;
+      }
+    }
+  }
+  &__link {
+    font-family: DM Sans, sans-serif;
+    @include font-weight(700, 14px, 1.29);
+    text-decoration: none;
+    color: getColor('primary-text-color');
+    transition: color 250ms linear;
+    &:hover,
+    &:focus {
+      color: getColor('accent-text-color');
+    }
+  }
+}
+
+.buttonBuyMenu {
+  margin-left: 34px;
+  margin-bottom: 19px;
+  padding: 11px 53px;
+}
