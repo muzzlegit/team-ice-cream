@@ -22,8 +22,6 @@
     opacity: 0;
     pointer-events: none;
   }
-
-  // Мобильное меню
   &__btnClose {
     position: absolute;
     top: 23px;
@@ -63,9 +61,6 @@
   &__link {
     font-family: DM Sans, sans-serif;
     @include font-weight(700, 14px, 1.29);
-    // font-weight: 700;
-    // font-size: 14px;
-    // line-height: 1.29;
     text-decoration: none;
     color: getColor('primaryTextColor');
     transition: color 250ms linear;

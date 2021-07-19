@@ -23,9 +23,6 @@
   margin-right: auto;
   &__menu {
     @include dis-jc(flex, center, space-between);
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
   }
   &__logo {
     margin-right: auto;
@@ -52,23 +49,19 @@
   }
   &__button-buy {
     @include dis-al(flex, center);
-    // display: flex;
-    // align-items: center;
+
     padding: 12px 37px;
     border: none;
     border-radius: 22px;
     color: getColor('accentTextColor');
     background: getColor('primaryTextColor');
     @include font-weight(700, 16px, 1.31);
-    // font-weight: 700;
-    // font-size: 16px;
-    // line-height: 1.31;
     @media screen and (min-width: 1280px) {
       margin-right: 115px;
     }
     &:hover,
     &:focus {
-      background-color: #e5e5e5;
+      background-color: getColor('btnhover');
     }
   }
   &__icon {
@@ -79,8 +72,6 @@
 
     @media screen and (min-width: 1280px) {
       @include dis-al(flex, center);
-      // display: flex;
-      // align-items: center;
       flex-direction: row;
     }
   }
@@ -96,9 +87,6 @@
   &__link-desk {
     font-family: DM Sans, sans-serif;
     @include font-weight(700, 16px, 1.31);
-    // font-weight: 700;
-    // font-size: 16px;
-    // line-height: 21px;
     text-decoration: none;
     color: getColor('primaryTextColor');
     transition: color 250ms linear;

@@ -89,31 +89,21 @@
     padding-top: 193px;
     font-family: Titan One;
     @include font(400, 26px, 1.54, 0.04em);
-    // font-weight: 400;
-    // font-size: 26px;
-    // line-height: 1.54;
-    // letter-spacing: 0.04em;
     text-transform: uppercase;
     color: getColor('primaryTextColor');
     z-index: 5;
     @media screen and (min-width: 768px) {
       padding-top: 102px;
       @include font-line(22px, 1.136);
-      // font-size: 22px;
-      // line-height: 1.136;
     }
     @media screen and (min-width: 1280px) {
       padding-top: 171px;
       @include font-line(38px, 1.158);
-      // font-size: 38px;
-      // line-height: 1.158;
     }
   }
 
   &__span-title {
     @include font-line(48px, 0.965);
-    // font-size: 48px;
-    // line-height: 0.965;
     color: getColor('accentTextColor');
   }
   &__list {
@@ -180,32 +170,39 @@
     margin-left: 120px;
     font-family: DM Sans;
     @include font-weight(400, 8px, 1.5);
-    // font-weight: 400;
-    // font-size: 8px;
-    // line-height: 1.5;
     color: getColor('primaryTextColor');
     @media screen and (min-width: 1280px) {
       width: 200px;
       margin-top: 112px;
       margin-left: 183px;
       @include font-line(14px, 1.42);
-      // font-size: 14px;
-      // line-height: 1.42;
     }
   }
-  &__icon {
+  &__iconLink {
     @media screen and (max-width: 767px) {
       display: none;
     }
+    @include dis-jc(flex, center, center);
     width: 18px;
     height: 18px;
     margin-top: 7px;
     margin-left: 120px;
+    border-radius: 50%;
+    background-color: getColor('primaryTextColor');
     @media screen and (min-width: 1280px) {
       width: 20px;
       height: 20px;
       margin-top: 20px;
       margin-left: 183px;
+    }
+    &:hover,
+    &:focus {
+      background-color: getColor('btnhover');
+    }
+  }
+  &__icon {
+    @media screen and (max-width: 767px) {
+      display: none;
     }
   }
   &__number {
@@ -244,27 +241,18 @@
     position: relative;
     font-family: Titan One;
     @include font(400, 28px, 1.14, 0.04em);
-    // font-weight: 400;
-    // font-size: 28px;
-    // line-height: 1.14;
-    // letter-spacing: 0.04em;
     text-transform: uppercase;
     color: getColor('accentTextColor');
     @media screen and (min-width: 1280px) {
       @include font-line(46px, 1.15);
-      // font-size: 46px;
-      // line-height: 1.15;
     }
   }
   &__subtext {
-    font-weight: 400;
-    font-size: 8px;
-    line-height: 1.25;
+    @include font-weight(400, 8px, 1.25);
 
     color: getColor('primaryTextColor');
     @media screen and (min-width: 1280px) {
-      font-size: 14px;
-      line-height: 1.28;
+      @include font-line(14px, 1.28);
     }
   }
 }
