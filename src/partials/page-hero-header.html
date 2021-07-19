@@ -187,37 +187,5 @@
     </a>
   </div>
 </section>
-<script>
-  (() => {
-    const refs = {
-      openModalBtn: document.querySelector('[data-menu-open]'),
-      closeModalBtn: document.querySelector('[data-menu-close]'),
-      modal: document.querySelector('[data-menu]'),
-    };
-
-    refs.openModalBtn.addEventListener('click', toggleModal);
-    refs.closeModalBtn.addEventListener('click', toggleModal);
-
-    function toggleModal() {
-      document.body.classList.toggle('modal-open');
-      refs.modal.classList.toggle('is-hidden');
-    }
-  })();
-</script>
-<script>
-  $(window).scroll(function () {
-    var height = $(window).scrollTop();
-    if (height > 100) {
-      $('#back2Top').fadeIn();
-    } else {
-      $('#back2Top').fadeOut();
-    }
-  });
-  $(document).ready(function () {
-    $('#back2Top').click(function (event) {
-      event.preventDefault();
-      $('html, body').animate({ scrollTop: 0 }, 'slow');
-      return false;
-    });
-  });
-</script>
+<script src="./js/menu.js"></script>
+<script src="./js/scroll.js"></script>
