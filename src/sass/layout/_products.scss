@@ -32,6 +32,9 @@
     justify-content: space-between;
     margin-right: -20px;
   }
+  @media screen and (min-width: $desktop) {
+    margin-right: -24px;
+  }
 }
 
 .products-list__item {
@@ -46,19 +49,16 @@
   height: 485px;
 
   @media screen and (min-width: $tablet) {
-    // width: 220px;
-
-    flex-basis: calc((100% - 72px) / 3);
-    margin-right: 24px;
+    flex-basis: calc((100% - 60px) / 3);
+    margin-right: 20px;
   }
   @media screen and (min-width: $desktop) {
-    // width: 330px;
+    flex-basis: calc((100% - 72px) / 3);
+    margin-right: 24px;
     height: 525px;
   }
 }
-// .products-list__item:nth-child(1) {
-//   background-color: getColor('accentBackgroundColor');
-// }
+
 .products-list__item:nth-child(2) {
   background-color: getColor('otherBackgroundColor2');
 }
@@ -73,11 +73,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  // background-position: top -113px;
 
-  background-image: url(./../images/mobile/products/ice-cream.png);
-
-  // outline: 1px solid black;
   position: absolute;
   top: -113px;
   left: 50%;
@@ -93,11 +89,60 @@
     top: -210px;
   }
 }
+.products-list__item:nth-child(1)::before {
+  background-image: url(./../images/mobile/products/ice-cream.png);
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(./../images/mobile/products/ice-cream-x2.png);
+  }
+  @media screen and (min-width: $tablet) {
+    background-image: url(./../images/tablet/products/ice-cream.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(./../images/tablet/products/ice-cream-x2.png);
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url(./../images/desktop/products/ice-cream.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(./../images/desktop/products/ice-cream-x2.png);
+    }
+  }
+}
+
 .products-list__item:nth-child(2)::before {
   background-image: url(./../images/mobile/products/ice-coffee.png);
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(./../images/mobile/products/ice-coffee-x2.png);
+  }
+  @media screen and (min-width: $tablet) {
+    background-image: url(./../images/tablet/products/ice-coffee.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(./../images/tablet/products/ice-coffee-x2.png);
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url(./../images/desktop/products/ice-coffee.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(./../images/desktop/products/ice-coffee-x2.png);
+    }
+  }
 }
 .products-list__item:nth-child(3)::before {
   background-image: url(./../images/mobile/products/milkshakes.png);
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(./../images/mobile/products/milkshakes-x2.png);
+  }
+  @media screen and (min-width: $tablet) {
+    background-image: url(./../images/tablet/products/milkshakes.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(./../images/tablet/products/milkshakes-x2.png);
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url(./../images/desktop/products/milkshakes.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(./../images/desktop/products/milkshakes-x2.png);
+    }
+  }
 }
 .products-list__item-thumb {
   position: absolute;
@@ -127,14 +172,21 @@
 }
 .products-list__card-title::after {
   content: '';
-  // position: absolute;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: block;
   width: 26px;
   height: 6px;
-  background-image: url(./../images/icons/dots.svg);
-  // top: 214px;
+  margin-top: 30px;
 
+  background-image: url(./../images/icons/three-dots.svg#icon-three-dots-svgrepo-com-1);
+
+  // fill: white;
   outline: 1px solid black;
+  @media screen and (min-width: $desktop) {
+    margin-top: 32px;
+  }
 }
 
 .products-list__text {
@@ -145,7 +197,6 @@
   padding-right: 40px;
 
   color: getColor('primaryTextColor');
-  // font-family: DM Sans;
   @include font(700, 14px, 1.52, 0.04em);
   @media screen and (min-width: $tablet) {
     margin-bottom: 40px;
