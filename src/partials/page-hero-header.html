@@ -3,35 +3,27 @@
     <div class="header__menu">
       <!-- logo -->
 
-      <a class="header__logo logo" href="#">
+      <a class="header__logo logo" href="./index.html">
         <img src="./images/icons/logo.svg" alt="Логотип" />
       </a>
 
       <!-- desk menu -->
 
-      <ul class="menu-list__pc header__list-desk list">
-        <li class="menu-list__item-pc header__item-desk item">
-          <a class="menu-list__link-pc scrollto header__link-desk link" href="#header">Home</a>
+      <ul class="header__list-desk list">
+        <li class="header__item-desk item">
+          <a class="header__link-desk scrollto link" href="#hero">Home</a>
         </li>
-        <li class="menu-list__item-pc header__item-desk item">
-          <a class="menu-list__link-pc scrollto header__link-desk link" href="#products"
-            >About us</a
-          >
+        <li class="header__item-desk item">
+          <a class="header__link-desk scrollto link" href="#products">About us</a>
         </li>
-        <li class="menu-list__item-pc header__item-desk item">
-          <a class="menu-list__link-pc scrollto header__link-desk link" href="#benefits"
-            >How it’s made?</a
-          >
+        <li class="header__item-desk item">
+          <a class="header__link-desk scrollto link" href="#benefits">How it’s made?</a>
         </li>
-        <li class="menu-list__item-pc header__item-desk item">
-          <a class="menu-list__link-pc scrollto header__link-desk link" href="#testimonials"
-            >Our products</a
-          >
+        <li class="header__item-desk item">
+          <a class="header__link-desk scrollto link" href="#testimonials">Our products</a>
         </li>
-        <li class="menu-list__item-pc header__item-desk item">
-          <a class="menu-list__link-pc scrollto header__link-desk link" href="#page-footer"
-            >Contact</a
-          >
+        <li class="header__item-desk item">
+          <a class="header__link-desk scrollto link" href="#footer">Contact</a>
         </li>
       </ul>
       <!-- кнопка открытия меню -->
@@ -41,6 +33,8 @@
         </svg>
       </button>
 
+      <!-- меню -->
+
       <div class="header__menu-container menu-container is-hidden" data-menu>
         <button class="menu-container__btnClose" type="button is-hidden" data-menu-close>
           <svg class="menu-container__iconClose" width="14" height="14">
@@ -48,29 +42,36 @@
           </svg>
         </button>
 
-        <button class="button-open">Buy now</button>
+        <!-- кнопка покупки в меню -->
 
-        <!-- Мобильное меню -->
-        <ul class="menu-list">
-          <li class="menu-list__item">
-            <a class="menu-list__link scrollto" href="#header">Home</a>
+        <button class="header__button header__button-buy buttonBuyMenu">
+          Buy now
+          <svg class="header__icon" width="4" height="12">
+            <use href="./images/icons/icons.svg#read-more-icon"></use>
+          </svg>
+        </button>
+
+        <!-- Мобильное(tablet) меню -->
+        <ul class="menu-container__list">
+          <li class="menu-container__item">
+            <a class="menu-container__link scrollto" href="#hero">Home</a>
           </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link scrollto" href="#products">About us</a>
+          <li class="menu-container__item">
+            <a class="menu-container__link scrollto" href="#products">About us</a>
           </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link scrollto" href="#benefits">How it’s made?</a>
+          <li class="menu-container__item">
+            <a class="menu-container__link scrollto" href="#benefits">How it’s made?</a>
           </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link scrollto" href="#testimonials">Our products</a>
+          <li class="menu-container__item">
+            <a class="menu-container__link scrollto" href="#testimonials">Our products</a>
           </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link scrollto" href="#page-footer">Contact</a>
+          <li class="menu-container__item">
+            <a class="menu-container__link scrollto" href="#footer">Contact</a>
           </li>
         </ul>
       </div>
-      <!-- кнопка покупки -->
-      <button class="header__button header__button-buy">
+      <!-- кнопка покупки основная-->
+      <button class="header__button header__button-buy buttonBuyHeader">
         Buy now
         <svg class="header__icon" width="4" height="12">
           <use href="./images/icons/icons.svg#read-more-icon"></use>
@@ -80,7 +81,7 @@
   </div>
 </header>
 
-<section class="hero">
+<section class="hero" id="hero">
   <div class="hero__container container">
     <div class="hero__number hero-number">
       <ul class="hero-number__list list">
@@ -202,4 +203,14 @@
       refs.modal.classList.toggle('is-hidden');
     }
   })();
+</script>
+<script>
+  jQuery(document).ready(function () {
+    jQuery('a.scrollto').click(function () {
+      elementClick = jQuery(this).attr('href');
+      destination = jQuery(elementClick).offset().top;
+      jQuery('html:not(:animated),body:not(:animated)').animate({ scrollTop: destination }, 800);
+      return false;
+    });
+  });
 </script>

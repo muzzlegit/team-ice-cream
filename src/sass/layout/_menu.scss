@@ -9,7 +9,6 @@
   width: 250px;
   opacity: 1;
   transition: opacity 250ms linear;
-
   @media screen and (min-width: 768px) {
     width: 254px;
     right: 0;
@@ -19,26 +18,65 @@
   @media screen and (min-width: 1280px) {
     display: none;
   }
-}
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 
-.menu-container.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.menu-container__btnClose {
-  position: absolute;
-  top: 23px;
-  right: 23px;
-  border: none;
-  background: transparent;
-
-  @media screen and (min-width: 768px) {
+  // Мобильное меню
+  &__btnClose {
+    position: absolute;
     top: 23px;
-    right: 34px;
+    right: 23px;
+    border: none;
+    background: transparent;
+    @media screen and (min-width: 768px) {
+      top: 23px;
+      right: 34px;
+    }
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    border-top: 1px solid #e18298;
+    &:last-child {
+      border-bottom: 1px solid #e18298;
+    }
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 24px;
+      border-top: 1px solid #e18298;
+      &:last-child {
+        border-bottom: 1px solid #e18298;
+      }
+    }
+  }
+  &__link {
+    font-family: DM Sans, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.29;
+    text-decoration: none;
+    color: #fff;
+    transition: color 250ms linear;
+    &:hover,
+    &:focus {
+      color: #d41443;
+    }
   }
 }
 
-.menu-container__iconClose {
-  display: block;
+.buttonBuyMenu {
+  margin-left: 34px;
+  margin-bottom: 19px;
+  padding: 11px 53px;
 }
