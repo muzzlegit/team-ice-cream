@@ -3,12 +3,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   position: relative;
   margin-top: 100px;
   @media screen and (min-width: $desktop) {
+<<<<<<< Updated upstream
     background-image: linear-gradient(to bottom, rgba(255, 245, 246, 0.5), rgba(255, 245, 246, 1)),
       url('../images/desktop/overlay/overlay.png');
     //   url('../images/desktop/overlay/overlay.jpg');
+=======
+>>>>>>> Stashed changes
     background-repeat: no-repeat;
     background-size: contain;
     background-color: rgba(255, 245, 246, 1);
@@ -238,7 +242,7 @@
   &:hover,
   &:focus,
   &:active {
-    background-color: #d41443;
+    background-color: rgba(212, 19, 66, 1);
     cursor: pointer;
   }
   & .contact__button--icon {
@@ -247,8 +251,7 @@
 }
 
 .contact__button--lang {
-  color: getColor('btn-hover');
-  //   #d41342
+  color: #d41342;
   background-color: getColor('white-color');
   border-radius: 22px;
   width: 161px;
