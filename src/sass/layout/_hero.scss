@@ -1,5 +1,5 @@
 .hero {
-  background: #ffb8ca;
+  background: getColor('accentBackgroundColor');
   height: 502px;
   margin-left: auto;
   margin-right: auto;
@@ -88,29 +88,33 @@
     position: relative;
     padding-top: 193px;
     font-family: Titan One;
+    @include font(400, 26px, 1.54, 0.04em);
+    // font-weight: 400;
+    // font-size: 26px;
+    // line-height: 1.54;
+    // letter-spacing: 0.04em;
     text-transform: uppercase;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 1.54;
-    letter-spacing: 0.04em;
-    color: #fff;
+    color: getColor('primaryTextColor');
     z-index: 5;
     @media screen and (min-width: 768px) {
       padding-top: 102px;
-      font-size: 22px;
-      line-height: 1.136;
+      @include font-line(22px, 1.136);
+      // font-size: 22px;
+      // line-height: 1.136;
     }
     @media screen and (min-width: 1280px) {
       padding-top: 171px;
-      font-size: 38px;
-      line-height: 1.158;
+      @include font-line(38px, 1.158);
+      // font-size: 38px;
+      // line-height: 1.158;
     }
   }
 
   &__span-title {
-    font-size: 48px;
-    line-height: 0.965;
-    color: #d41443;
+    @include font-line(48px, 0.965);
+    // font-size: 48px;
+    // line-height: 0.965;
+    color: getColor('accentTextColor');
   }
   &__list {
     display: flex;
@@ -134,8 +138,8 @@
     font-weight: 400;
     font-size: 8px;
     line-height: 1.25;
-    color: #fff;
-    background-color: #d41443;
+    color: getColor('primaryTextColor');
+    background-color: getColor('accentTextColor');
     border: none;
     border-radius: 20px;
     padding: 7px 15px;
@@ -150,21 +154,21 @@
     }
     &:hover,
     &:focus {
-      color: #d41443;
-      background-color: #fff;
+      color: getColor('accentTextColor');
+      background-color: getColor('primaryTextColor');
     }
   }
   &__link--made {
     min-width: 83px;
-    color: #d41443;
-    background-color: #fff;
+    color: getColor('accentTextColor');
+    background-color: getColor('primaryTextColor');
     @media screen and (min-width: 1280px) {
       min-width: 138px;
     }
     &:hover,
     &:focus {
-      color: #fff;
-      background-color: #d41443;
+      color: getColor('primaryTextColor');
+      background-color: getColor('accentTextColor');
     }
   }
   &__text {
@@ -175,18 +179,18 @@
     margin-top: 66px;
     margin-left: 120px;
     font-family: DM Sans;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 8px;
-    line-height: 1.5;
-    color: #ffffff;
+    @include font-weight(400, 8px, 1.5);
+    // font-weight: 400;
+    // font-size: 8px;
+    // line-height: 1.5;
+    color: getColor('primaryTextColor');
     @media screen and (min-width: 1280px) {
       width: 200px;
-      font-weight: 400;
       margin-top: 112px;
       margin-left: 183px;
-      font-size: 14px;
-      line-height: 1.42;
+      @include font-line(14px, 1.42);
+      // font-size: 14px;
+      // line-height: 1.42;
     }
   }
   &__icon {
@@ -227,7 +231,7 @@
     width: 16px;
     height: 16px;
     margin-right: -10px;
-    background: #fff;
+    background: getColor('primaryTextColor');
     border-radius: 50%;
     right: 0;
     @media screen and (min-width: 1280px) {
@@ -239,15 +243,17 @@
   &__text {
     position: relative;
     font-family: Titan One;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 1.14;
-    letter-spacing: 0.04em;
+    @include font(400, 28px, 1.14, 0.04em);
+    // font-weight: 400;
+    // font-size: 28px;
+    // line-height: 1.14;
+    // letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #d41443;
+    color: getColor('accentTextColor');
     @media screen and (min-width: 1280px) {
-      font-size: 46px;
-      line-height: 1.15;
+      @include font-line(46px, 1.15);
+      // font-size: 46px;
+      // line-height: 1.15;
     }
   }
   &__subtext {
@@ -255,7 +261,7 @@
     font-size: 8px;
     line-height: 1.25;
 
-    color: #fff;
+    color: getColor('primaryTextColor');
     @media screen and (min-width: 1280px) {
       font-size: 14px;
       line-height: 1.28;

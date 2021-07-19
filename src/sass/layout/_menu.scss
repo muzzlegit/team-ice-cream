@@ -3,7 +3,7 @@
   top: 0;
   right: 0;
   z-index: 20;
-  background: #e17992;
+  background: getColor('otherBackgroundColor1');
   padding-top: 60px;
   padding-bottom: 171px;
   width: 250px;
@@ -62,15 +62,16 @@
   }
   &__link {
     font-family: DM Sans, sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.29;
+    @include font-weight(700, 14px, 1.29);
+    // font-weight: 700;
+    // font-size: 14px;
+    // line-height: 1.29;
     text-decoration: none;
-    color: #fff;
+    color: getColor('primaryTextColor');
     transition: color 250ms linear;
     &:hover,
     &:focus {
-      color: #d41443;
+      color: getColor('accentTextColor');
     }
   }
 }
