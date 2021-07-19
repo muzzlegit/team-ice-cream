@@ -34,13 +34,42 @@
           >
         </li>
       </ul>
-
-      <button class="header__button header__button--open-menu" type="button" data-modal-open="">
+      <!-- кнопка открытия меню -->
+      <button class="header__button header__button--open-menu" type="button" data-menu-open>
         <svg class="menu__svg" width="20" height="12">
           <use href="./images/icons/icons.svg#burger-menu-icon"></use>
         </svg>
       </button>
 
+      <div class="header__menu-container menu-container is-hidden" data-menu>
+        <button class="menu-container__btnClose" type="button is-hidden" data-menu-close>
+          <svg class="menu-container__iconClose" width="14" height="14">
+            <use href="./images/icons/icons.svg#close-menu-icon"></use>
+          </svg>
+        </button>
+
+        <button class="button-open">Buy now</button>
+
+        <!-- Мобильное меню -->
+        <ul class="menu-list">
+          <li class="menu-list__item">
+            <a class="menu-list__link scrollto" href="#header">Home</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link scrollto" href="#products">About us</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link scrollto" href="#benefits">How it’s made?</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link scrollto" href="#testimonials">Our products</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link scrollto" href="#page-footer">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- кнопка покупки -->
       <button class="header__button header__button-buy">
         Buy now
         <svg class="header__icon" width="4" height="12">
@@ -53,6 +82,18 @@
 
 <section class="hero">
   <div class="hero__container container">
+    <div class="hero__number hero-number">
+      <ul class="hero-number__list list">
+        <li class="hero-number__item item">
+          <p class="hero-number__text">16</p>
+          <p class="hero-number__subtext">cafes</p>
+        </li>
+        <li class="hero-number__item item">
+          <p class="hero-number__text">23</p>
+          <p class="hero-number__subtext">food trucks</p>
+        </li>
+      </ul>
+    </div>
     <picture>
       <source
         srcset="
@@ -87,6 +128,7 @@
       />
       <img class="hero__ellipse" src="./images/heroEllips/ellipse.png" alt="ellipse" />
     </picture>
+
     <picture>
       <source
         srcset="
@@ -107,6 +149,20 @@
       <img class="hero__girl" src="./images/tablet/hero/girl-with-ice-cream.png" alt="Мороженное" />
     </picture>
 
+    <picture>
+      <source
+        srcset="./images/desktop/hero/milk.png 1x, ./images/desktop/hero/milk-x2.png 2x"
+        media="(min-width: 1280px)"
+        type="image/png"
+      />
+      <source
+        srcset="./images/tablet/hero/milk.png 1x, ./images/tablet/hero/milk-x2.png 2x"
+        media="(min-width: 768px)"
+        type="image/png"
+      />
+      <img class="hero__milk" src="./images/tablet/hero/milk.png" alt="Мороженное" />
+    </picture>
+
     <h1 class="hero__title">
       Ice cream <br />
       made with <br />
@@ -125,5 +181,25 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
       labore et
     </p>
+    <a href="#">
+      <img class="hero__icon" src="./images/icons/arrow-right.png" alt="Стрелка вправо" />
+    </a>
   </div>
 </section>
+<script>
+  (() => {
+    const refs = {
+      openModalBtn: document.querySelector('[data-menu-open]'),
+      closeModalBtn: document.querySelector('[data-menu-close]'),
+      modal: document.querySelector('[data-menu]'),
+    };
+
+    refs.openModalBtn.addEventListener('click', toggleModal);
+    refs.closeModalBtn.addEventListener('click', toggleModal);
+
+    function toggleModal() {
+      document.body.classList.toggle('modal-open');
+      refs.modal.classList.toggle('is-hidden');
+    }
+  })();
+</script>

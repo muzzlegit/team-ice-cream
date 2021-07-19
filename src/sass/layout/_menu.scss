@@ -1,0 +1,44 @@
+.menu-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  background: #e17992;
+  padding-top: 60px;
+  padding-bottom: 171px;
+  width: 250px;
+  opacity: 1;
+  transition: opacity 250ms linear;
+
+  @media screen and (min-width: 768px) {
+    width: 254px;
+    right: 0;
+    padding-top: 60px;
+    padding-bottom: 689px;
+  }
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.menu-container.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu-container__btnClose {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  border: none;
+  background: transparent;
+
+  @media screen and (min-width: 768px) {
+    top: 23px;
+    right: 34px;
+  }
+}
+
+.menu-container__iconClose {
+  display: block;
+}

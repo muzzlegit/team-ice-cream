@@ -22,16 +22,14 @@
   @media screen and (min-width: 768px) {
     width: 143px;
     height: 336px;
-    margin-left: 378px;
+    margin-left: 340px;
     margin-top: 63px;
-    margin-right: 247px;
   }
   @media screen and (min-width: 1280px) {
     width: 236px;
     height: 557px;
-    margin-left: 594px;
+    margin-left: 482px;
     margin-top: 108px;
-    margin-right: 450px;
   }
 }
 .hero__ellipse {
@@ -48,7 +46,7 @@
     margin-bottom: 31px;
     margin-right: 137px;
     margin-top: 46px;
-    margin-left: 307px;
+    margin-left: 273px;
   }
   @media screen and (min-width: 1280px) {
     width: 538px;
@@ -56,7 +54,7 @@
     margin-bottom: 52px;
     margin-right: 267px;
     margin-top: 75px;
-    margin-left: 475px;
+    margin-left: 363px;
   }
 }
 
@@ -68,13 +66,27 @@
   height: 133px;
   position: absolute;
   margin-top: 266px;
-  margin-left: 566px;
+  margin-left: 532px;
   z-index: 6;
   @media screen and (min-width: 1280px) {
     width: 293px;
     height: 232px;
     margin-top: 433px;
-    margin-right: 119px;
+    margin-left: 766px;
+  }
+}
+.hero__milk {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  position: absolute;
+  width: 124px;
+
+  margin-top: 245px;
+  @media screen and (min-width: 1280px) {
+    width: 188px;
+    margin-top: 429px;
+    margin-left: -35px;
   }
 }
 
@@ -166,7 +178,6 @@
     display: none;
   }
   width: 124px;
-  height: 48px;
   margin-top: 66px;
   margin-left: 120px;
   font-family: DM Sans;
@@ -182,5 +193,76 @@
     margin-left: 183px;
     font-size: 14px;
     line-height: 1.42;
+  }
+}
+.hero__icon {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  width: 18px;
+  height: 18px;
+  margin-top: 7px;
+  margin-left: 120px;
+  @media screen and (min-width: 1280px) {
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 183px;
+  }
+}
+
+.hero__number {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  margin-top: 94px;
+  margin-left: 649px;
+  position: absolute;
+  display: block;
+  text-align: end;
+  @media screen and (min-width: 1280px) {
+    margin-top: 156px;
+    margin-left: 979px;
+  }
+}
+.hero-number__item::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-right: -10px;
+  background: #fff;
+  border-radius: 50%;
+  right: 0;
+  @media screen and (min-width: 1280px) {
+    width: 30px;
+    height: 30px;
+    margin-right: -18px;
+  }
+}
+.hero-number__text {
+  position: relative;
+  font-family: Titan One;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d41443;
+  @media screen and (min-width: 1280px) {
+    font-size: 46px;
+    line-height: 1.15;
+  }
+}
+
+.hero-number__subtext {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+
+  color: #fff;
+  @media screen and (min-width: 1280px) {
+    font-size: 14px;
+    line-height: 1.28;
   }
 }
