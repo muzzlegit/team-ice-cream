@@ -17,10 +17,11 @@
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 100;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
+  background-color: rgb(255, 184, 202, 20%);
   &__menu {
     @include dis-jc(flex, center, space-between);
   }
@@ -104,7 +105,7 @@
 }
 
 .buttonBuyHeader {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.9px) {
     display: none;
   }
 }
