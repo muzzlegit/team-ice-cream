@@ -1,6 +1,204 @@
-<header>
+<header class="header">
+  <div class="container-wraper container">
+    <div class="header__menu">
+      <!-- logo -->
 
+      <a class="header__logo logo" href="./index.html">
+        <img src="./images/icons/logo.svg" alt="Логотип" />
+      </a>
+
+      <!-- desk menu -->
+
+      <ul class="header__list-desk list">
+        <li class="header__item-desk item">
+          <a class="header__link-desk scrollto link" href="#hero">Home</a>
+        </li>
+        <li class="header__item-desk item">
+          <a class="header__link-desk scrollto link" href="#about">About us</a>
+        </li>
+        <li class="header__item-desk item">
+          <a class="header__link-desk scrollto link" href="#made">How it’s made?</a>
+        </li>
+        <li class="header__item-desk item">
+          <a class="header__link-desk scrollto link" href="#products">Our products</a>
+        </li>
+        <li class="header__item-desk item">
+          <a class="header__link-desk scrollto link" href="#contact">Contact</a>
+        </li>
+      </ul>
+      <!-- кнопка открытия меню -->
+      <button class="header__button header__button--open-menu" type="button" data-menu-open>
+        <svg class="menu__svg" width="20" height="12">
+          <use href="./images/icons/icons.svg#burger-menu-icon"></use>
+        </svg>
+      </button>
+
+      <!-- меню -->
+
+      <div class="header__menu-container menu-container is-hidden" data-menu>
+        <button class="menu-container__btnClose" type="button" data-menu-close>
+          <svg class="menu-container__iconClose" width="14" height="14">
+            <use href="./images/icons/icons.svg#close-menu-icon"></use>
+          </svg>
+        </button>
+
+        <!-- кнопка покупки в меню -->
+
+        <button class="header__button header__button-buy buttonBuyMenu" type="button">
+          Buy now
+          <svg class="header__icon" width="6" height="16">
+            <use href="./images/icons/icons.svg#read-more-icon"></use>
+          </svg>
+        </button>
+
+        <!-- Мобильное(tablet) меню -->
+        <ul class="menu-container__list">
+          <li class="menu-container__item">
+            <a class="menu-container__link" href="#hero">Home</a>
+          </li>
+          <li class="menu-container__item">
+            <a class="menu-container__link" href="#about">About us</a>
+          </li>
+          <li class="menu-container__item">
+            <a class="menu-container__link" href="#made">How it’s made?</a>
+          </li>
+          <li class="menu-container__item">
+            <a class="menu-container__link" href="#products">Our products</a>
+          </li>
+          <li class="menu-container__item">
+            <a class="menu-container__link" href="#footer">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- кнопка покупки основная-->
+      <button class="header__button header__button-buy buttonBuyHeader" type="button">
+        Buy now
+        <svg class="header__icon" width="6" height="16">
+          <use href="./images/icons/icons.svg#read-more-icon"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
 </header>
 
+<section class="hero" id="hero">
+  <div class="hero__container container">
+    <div class="hero__number hero-number">
+      <ul class="hero-number__list list">
+        <li class="hero-number__item item">
+          <p class="hero-number__text">16</p>
+          <p class="hero-number__subtext">cafes</p>
+        </li>
+        <li class="hero-number__item item">
+          <p class="hero-number__text">23</p>
+          <p class="hero-number__subtext">food trucks</p>
+        </li>
+      </ul>
+    </div>
+    <picture>
+      <source
+        srcset="
+          ./images/desktop/hero/hero-ice-cream.png    1x,
+          ./images/desktop/hero/hero-ice-cream-x2.png 2x
+        "
+        media="(min-width: 1280px)"
+        type="image/png"
+      />
+      <source
+        srcset="
+          ./images/tablet/hero/hero-ice-cream.png    1x,
+          ./images/tablet/hero/hero-ice-cream-x2.png 2x
+        "
+        media="(min-width: 768px)"
+        type="image/png"
+      />
+      <source
+        srcset="
+          ./images/mobile/hero/hero-ice-cream.png    1x,
+          ./images/mobile/hero/hero-ice-cream-x2.png 2x
+        "
+        media="(max-width: 320px)"
+        type="image/png"
+      />
+      <img class="hero__ice" src="./images/mobile/hero/hero-ice-cream.png" alt="Мороженное" />
+    </picture>
+    <picture>
+      <source
+        srcset="./images/heroEllips/ellipse.png 1x, ./images/heroEllips/ellipse@2x.png 2x"
+        type="image/png"
+      />
+      <img class="hero__ellipse" src="./images/heroEllips/ellipse.png" alt="ellipse" />
+    </picture>
 
+    <picture>
+      <source
+        srcset="
+          ./images/desktop/hero/girl-with-ice-cream.png    1x,
+          ./images/desktop/hero/girl-with-ice-cream-x2.png 2x
+        "
+        media="(min-width: 1280px)"
+        type="image/png"
+      />
+      <source
+        srcset="
+          ./images/tablet/hero/girl-with-ice-cream.png    1x,
+          ./images/tablet/hero/girl-with-ice-cream-x2.png 2x
+        "
+        media="(min-width: 768px)"
+        type="image/png"
+      />
+      <img class="hero__girl" src="./images/tablet/hero/girl-with-ice-cream.png" alt="Мороженное" />
+    </picture>
 
+    <picture>
+      <source
+        srcset="./images/desktop/hero/milk.png 1x, ./images/desktop/hero/milk-x2.png 2x"
+        media="(min-width: 1280px)"
+        type="image/png"
+      />
+      <source
+        srcset="./images/tablet/hero/milk.png 1x, ./images/tablet/hero/milk-x2.png 2x"
+        media="(min-width: 768px)"
+        type="image/png"
+      />
+      <img class="hero__milk" src="./images/tablet/hero/milk.png" alt="Мороженное" />
+    </picture>
+
+    <h1 class="hero__title">
+      Ice cream <br />
+      made with <br />
+      <span class="hero__span-title">passion</span>
+    </h1>
+
+    <ul class="hero__list list">
+      <li class="hero__item item">
+        <a class="hero__link hero__link--products link" href="#">Products</a>
+      </li>
+      <li class="hero__item item">
+        <a class="hero__link hero__link--made link" href="#">How it’s made?</a>
+      </li>
+    </ul>
+    <p class="hero__text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore et
+    </p>
+    <a class="hero__iconLink link" id="train" href="#">
+      <img src="./images/icons/arrow-right.png" alt="стрелочка" />
+    </a>
+  </div>
+</section>
+<script src="./js/menu.js"></script>
+<script src="./js/scroll.js"></script>
+<script>
+  train.onclick = function () {
+    let start = Date.now();
+
+    let timer = setInterval(function () {
+      let timePassed = Date.now() - start;
+
+      train.style.left = timePassed / 5 + 'px';
+
+      if (timePassed > 1560) clearInterval(timer);
+    }, 20);
+  };
+</script>
