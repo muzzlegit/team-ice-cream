@@ -95,11 +95,15 @@
       color: getColor('accent-text-color');
     }
   }
-}
-
-.buttonBuyHeader {
-  @media screen and (max-width: 767.9px) {
-    display: none;
+  &__button-buy--menu {
+    margin-left: 34px;
+    margin-bottom: 19px;
+    padding: 11px 53px;
+  }
+  &__button-buy__header {
+    @media screen and (max-width: 767.9px) {
+      display: none;
+    }
   }
 }
 
@@ -112,8 +116,8 @@
   padding-top: 60px;
   padding-bottom: 171px;
   width: 250px;
-  opacity: 1;
-  transition: opacity 250ms linear;
+  transform: translateX(0);
+  transition: transform 250ms linear;
   @media screen and (min-width: 768px) {
     width: 254px;
     right: 0;
@@ -124,7 +128,7 @@
     display: none;
   }
   &.is-hidden {
-    opacity: 0;
+    transform: translateX(100%);
     pointer-events: none;
   }
   &__btnClose {
@@ -179,10 +183,4 @@
       color: getColor('accent-text-color');
     }
   }
-}
-
-.buttonBuyMenu {
-  margin-left: 34px;
-  margin-bottom: 19px;
-  padding: 11px 53px;
 }
