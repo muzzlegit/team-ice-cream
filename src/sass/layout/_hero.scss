@@ -190,7 +190,13 @@
     height: 18px;
     margin-top: 7px;
     margin-left: 120px;
+    border-radius: 50%;
+    background: getColor('primary-text-color');
     z-index: 20;
+    &:hover,
+    &:focus {
+      background: getColor('btn-hover');
+    }
     @media screen and (min-width: 1280px) {
       width: 20px;
       height: 20px;
