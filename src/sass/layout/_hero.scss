@@ -1,8 +1,10 @@
 .hero {
-  background: getColor('accent-background-color');
+  position: relative;
   height: 502px;
   margin-left: auto;
   margin-right: auto;
+  background: getColor('accent-background-color');
+  overflow: hidden;
   @media screen and (min-width: 768px) {
     height: 399px;
   }
@@ -55,7 +57,7 @@
     }
   }
   &__girl {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.9px) {
       display: none;
     }
     width: 168px;
@@ -72,7 +74,7 @@
     }
   }
   &__milk {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.9px) {
       display: none;
     }
     position: absolute;
@@ -162,7 +164,7 @@
     }
   }
   &__text {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.9px) {
       display: none;
     }
     width: 124px;
@@ -178,17 +180,23 @@
       @include font-line(14px, 1.42);
     }
   }
-  &__iconLink {
-    @media screen and (max-width: 767px) {
+  &__icon-link {
+    @media screen and (max-width: 767.9px) {
       display: none;
     }
     @include dis-jc(flex, center, center);
     position: absolute;
-    // cursor: pointer;
     width: 18px;
     height: 18px;
     margin-top: 7px;
     margin-left: 120px;
+    border-radius: 50%;
+    background: getColor('primary-text-color');
+    z-index: 20;
+    &:hover,
+    &:focus {
+      background: getColor('btn-hover');
+    }
     @media screen and (min-width: 1280px) {
       width: 20px;
       height: 20px;
@@ -197,7 +205,7 @@
     }
   }
   &__number {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.9px) {
       display: none;
     }
     margin-top: 94px;
