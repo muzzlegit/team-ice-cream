@@ -95,13 +95,23 @@
       color: getColor('accent-text-color');
     }
   }
-}
-
-.buttonBuyHeader {
-  @media screen and (max-width: 767.9px) {
-    display: none;
+  &__button-buy--menu {
+    margin-left: 34px;
+    margin-bottom: 19px;
+    padding: 11px 53px;
+  }
+  &__button-buy__header {
+    @media screen and (max-width: 767.9px) {
+      display: none;
+    }
   }
 }
+
+// .buttonBuyHeader {
+//   @media screen and (max-width: 767.9px) {
+//     display: none;
+//   }
+// }
 
 .menu-container {
   position: fixed;
@@ -181,8 +191,8 @@
   }
 }
 
-.buttonBuyMenu {
-  margin-left: 34px;
-  margin-bottom: 19px;
-  padding: 11px 53px;
-}
+// .buttonBuyMenu {
+//   margin-left: 34px;
+//   margin-bottom: 19px;
+//   padding: 11px 53px;
+// }
