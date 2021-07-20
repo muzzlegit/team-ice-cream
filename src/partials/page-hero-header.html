@@ -23,7 +23,7 @@
           <a class="header__link-desk scrollto link" href="#products">Our products</a>
         </li>
         <li class="header__item-desk item">
-          <a class="header__link-desk scrollto link" href="#footer">Contact</a>
+          <a class="header__link-desk scrollto link" href="#contact">Contact</a>
         </li>
       </ul>
       <!-- кнопка открытия меню -->
@@ -182,10 +182,23 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
       labore et
     </p>
-    <a class="hero__iconLink link" href="#">
+    <a class="hero__iconLink link" id="train" href="#">
       <img src="./images/icons/arrow-right.png" alt="стрелочка" />
     </a>
   </div>
 </section>
 <script src="./js/menu.js"></script>
 <script src="./js/scroll.js"></script>
+<script>
+  train.onclick = function () {
+    let start = Date.now();
+
+    let timer = setInterval(function () {
+      let timePassed = Date.now() - start;
+
+      train.style.left = timePassed / 5 + 'px';
+
+      if (timePassed > 1560) clearInterval(timer);
+    }, 20);
+  };
+</script>

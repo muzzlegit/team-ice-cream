@@ -183,6 +183,8 @@
       display: none;
     }
     @include dis-jc(flex, center, center);
+    position: absolute;
+    // cursor: pointer;
     width: 18px;
     height: 18px;
     margin-top: 7px;
