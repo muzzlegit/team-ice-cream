@@ -71,7 +71,7 @@
     display: none;
     @media screen and (min-width: 1280px) {
       @include dis-al(flex, center);
-      flex-direction: row;
+      // flex-direction: row;
     }
   }
   &__item-desk {
@@ -101,9 +101,14 @@
     padding: 11px 53px;
   }
   &__button-buy__header {
+    margin-right: 34px;
     @media screen and (max-width: 767.9px) {
       display: none;
     }
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-right: 112px;
   }
 }
 
