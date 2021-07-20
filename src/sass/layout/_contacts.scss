@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  flex-direction: column;
   margin-top: 100px;
   @media screen and (min-width: $desktop) {
     background-image: linear-gradient(to bottom, rgba(255, 245, 246, 0.5), rgba(255, 245, 246, 1)),
