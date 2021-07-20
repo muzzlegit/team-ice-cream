@@ -4,13 +4,18 @@
   text-align: center;
   background-color: getColor('primary-background-color');
   @media screen and (max-width: 767px) {
-    background-image: url(../images/mobile/about/background-milk.png);
+    background-image: url(../images/mobile/about/background-milk-left.png),
+      url(../images/mobile/about/background-milk-right.png);
     background-repeat: no-repeat;
-    background-position: 0 777px;
-    background-size: contain;
+    background-position: left 770px, right 770px;
+    background-size: auto;
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       & {
-        background-image: url(../images/mobile/about/background-milk-x2.png);
+        background-image: url(../images/mobile/about/background-milk-left-x2.png),
+          url(../images/mobile/about/background-milk-right-x2.png);
+        // background-repeat: no-repeat;
+        // background-position: left 770px, right 770px;
+        // background-size: auto;
       }
     }
   }
@@ -20,13 +25,18 @@
   }
   @media screen and (min-width: $desktop) {
     padding-bottom: 146px;
-    background-image: url(../images/desktop/about/background-milk.png);
+    background-image: url(../images/desktop/about/background-milk-left.png),
+      url(../images/desktop/about/background-milk-right.png);
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
+    background-position: left 342px, right 386px;
+    background-size: auto;
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       & {
-        background-image: url(../images/desktop/about/background-milk-x2.png);
+        background-image: url(../images/desktop/about/background-milk-left-x2.png),
+          url(../images/desktop/about/background-milk-right-x2.png);
+        background-repeat: no-repeat;
+        background-position: left 0px, right 0px;
+        background-size: auto;
       }
     }
   }
