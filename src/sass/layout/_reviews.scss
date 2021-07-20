@@ -98,6 +98,8 @@
     display: flex;
     width: 73px;
     justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #r1:checked ~ .s1 {
