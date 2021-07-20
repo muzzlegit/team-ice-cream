@@ -8,7 +8,7 @@
       url(../images/mobile/about/background-milk-right.png);
     background-repeat: no-repeat;
     background-position: left 770px, right 770px;
-    background-size: auto;
+    background-size: 42px, 68px;
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       & {
         background-image: url(../images/mobile/about/background-milk-left-x2.png),
@@ -29,7 +29,7 @@
       url(../images/desktop/about/background-milk-right.png);
     background-repeat: no-repeat;
     background-position: left 342px, right 386px;
-    background-size: auto;
+    background-size: 161px, 270px;
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       & {
         background-image: url(../images/desktop/about/background-milk-left-x2.png),
