@@ -1,5 +1,5 @@
 .contact__section {
-  background-color: #fff5f6;
+  background-color: getColor('primary-background-color');
   position: relative;
   padding-top: 1px;
   margin-top: 86px;
@@ -11,7 +11,6 @@
     background-color: rgba(255, 245, 246, 1);
     margin: auto;
     margin-top: 200px;
-    box-shadow: 0px 4px 4px 0px #00000040;
   }
 }
 .contacts__background {
@@ -92,10 +91,10 @@
   line-height: 1.833;
   letter-spacing: 0.04em;
   text-align: center;
-  color: #ffffff;
+  color: getColor('white-color');
   margin-bottom: 25px;
   text-transform: uppercase;
-  background: #f0d1a5;
+  background: getColor('other-background-color2');
   border-radius: 4px;
   width: 80px;
 
@@ -106,7 +105,7 @@
 }
 
 .contacts__title--foodtruck {
-  background: #c2e297;
+  background: getColor('other-background-color3');
   width: 130px;
 }
 
@@ -116,7 +115,7 @@
   line-height: 1.833;
   letter-spacing: 0.04em;
   text-align: left;
-  color: #000000;
+  color: getColor('text-color');
   margin-bottom: 10px;
   @media screen and (min-width: $desktop) {
     font-size: 16px;
@@ -143,7 +142,7 @@
   line-height: 1.833;
   letter-spacing: 0em;
   text-align: left;
-  color: #000000;
+  color: getColor('text-color');
   @media screen and (min-width: $desktop) {
     font-size: 16px;
     line-height: 1.875;
@@ -151,7 +150,7 @@
   }
 }
 .contacts__hours {
-  color: #ffa5ba;
+  color: getColor('secondary-text-color');
 }
 
 .contacts__link {
@@ -162,7 +161,7 @@
   line-height: 1.5;
   letter-spacing: 0em;
   text-align: left;
-  color: #907e82;
+  color: getColor('other-text-color');
   @media screen and (min-width: $desktop) {
     font-size: 16px;
     line-height: 29px;
@@ -223,10 +222,6 @@
   border: none;
   text-decoration: none;
   font-family: inherit;
-  // display: flex;
-  // align-items: center;
-  // justify-items: center;
-  // justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   @media screen and (min-width: $tablet) {
     width: 198px;
@@ -255,8 +250,8 @@
   border: none;
   text-decoration: none;
   font-family: inherit;
-  padding-top: 13px;
-  padding-bottom: 13px;
+  // padding-top: 13px;
+  // padding-bottom: 13px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   @media screen and (min-width: $tablet) {
     width: 198px;
