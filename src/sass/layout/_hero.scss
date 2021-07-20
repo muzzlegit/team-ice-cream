@@ -55,7 +55,7 @@
     }
   }
   &__girl {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.9px) {
       display: none;
     }
     width: 168px;
@@ -72,7 +72,7 @@
     }
   }
   &__milk {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.9px) {
       display: none;
     }
     position: absolute;
@@ -162,7 +162,7 @@
     }
   }
   &__text {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.9px) {
       display: none;
     }
     width: 124px;
@@ -179,7 +179,7 @@
     }
   }
   &__iconLink {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.9px) {
       display: none;
     }
     @include dis-jc(flex, center, center);
@@ -197,7 +197,7 @@
     }
   }
   &__number {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.9px) {
       display: none;
     }
     margin-top: 94px;
