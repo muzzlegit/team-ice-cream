@@ -66,7 +66,7 @@
       }
     }
   }
-  &__label {
+  &__container__section-pretitle {
     font-family: Titan One, sans-serif;
     @include font-letter(18px, 1.145, inherit);
     text-transform: uppercase;
@@ -79,7 +79,7 @@
       @include font-letter(30px, 1.133, inherit);
     }
   }
-  &__title {
+  &__container__section-title {
     margin-top: 15px;
     margin-bottom: 351px;
 
