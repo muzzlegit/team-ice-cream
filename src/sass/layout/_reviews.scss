@@ -1,12 +1,11 @@
 .customer-reviews{
-    display: flex;
+    @include dis-jc(flex, center, center);
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding-bottom: 86px;
     padding-top: 80px;
     .container{
         position: relative; 
+        width: 320px;
     }
 }
 .slider{
@@ -22,76 +21,80 @@
 }
 
 .slide{
-    display: flex;
-    align-items: center;
+    @include dis-al(flex, center);
     flex-direction: column;
     text-align: center;
-    width: 100%;
     transition: all .6s ease; 
+    position: relative;
 }
-.slide_comment{
+.slide::after{
+    content: '';
+    background-image: url(../images/icons/dots-slider-icon.svg);
+    width: 32px;
+    height: 4px;
+    position: absolute;
+    bottom: 43px;
+}
+.slide__comment{
     background-color: #FAFAFA;
     padding-top: 43px;
     padding-bottom: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 52px;
     position: relative;
     padding-left: 50px;
     padding-right: 50px;
 }
-.slide_gradient{
-    background-image: repeating-linear-gradient(transparent  0.1px 27px, #E1E1E1 27px 28px,
-    transparent  28px 58px,#E1E1E1 58px 59px);
-    padding-left: 19px;
-    padding-right: 20px;
-}
-
-.slide_text{
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 255%;
-    text-align: center;
-    font-weight: 500;
-    position: relative;
-}
-
-.slide_quotation-mark{
+.slide__comment::before{
+    content: '';
+    background-image: url(../images/icons/quote-icon.svg);
+    width: 54px;
+    height: 40px;
     position: absolute;
     top:32px;
     left:50px;
 }
-.slide_photo{
+.slide__gradient{
+    background-image: repeating-linear-gradient(transparent  0.1px 27px, #E1E1E1 27px 28px,
+    transparent  28px 59px,#E1E1E1 59px 60px);
+    padding-left: 19px;
+    padding-right: 20px;
+    width: 180px;
+}
+
+.slide__text{
+    @include font-weight(500, 12px, 2.583);
+    text-align: center;
+    position: relative;
+}
+.slide__photo{
     width: 85px;
     margin-bottom: 29px;
 }
-.slide_dots{
+.slide__dots{
     width: 32px;
     height: 4px;
     margin-bottom: 25px;
 }
-.slide_name{
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 186%;
+.slide__name{
+    @include font-weight(500, 14px, 1.857);
     text-align: center;
 }
 .dot{
     height: 14px;
     width: 14px;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include dis-jc(flex, center, center);
 }
 .dot:hover,
 .dot:focus{
     transform: scale(1.2);
 }
-.slider_input{
+.slider__input{
     position: absolute;
     display: none;
     visibility: hidden;
 }
-.slider_switch{
+.slider__switch{
     display: flex;
     width: 73px;
     justify-content: space-between;
@@ -107,51 +110,45 @@
     margin-left: -560px;
 }
 
-@media screen and (max-width:$tablet) {
-    .customer-reviews{
-        .container{
-            max-width: 320px;
-        }
-    }
-    .slide_gradient{
-        width: 180px;
-    }
-}
 @media screen and (min-width:$tablet) {
     .customer-reviews{
         .container{
-            padding-left: 74px;
-            padding-right: 74px;
+            padding-left: 0;
+            padding-right: 0;
+            width: 620px;
         }
     }
     .slider{
         margin-bottom: 35px;
     }
-    
-    .slide_comment{
+    .slide::after{
+        bottom: 39px;
+    }
+    .slide__comment{
         width: 620px; 
         padding-top: 47px;
-        margin-bottom: 24px;
+        margin-bottom: 42px;
         padding-left: 60px;
         padding-right: 36px;
     }
-    .slide_photo{
+    .slide__photo{
         margin-bottom: 19px;
     }
-    .slide_text{
-        font-size: 14px;
-        line-height: 216%;
-        letter-spacing: 0.04em;
+    .slide__text{
+        @include font-letter(14px, 2.142, 0.04em);
     }
-    .slide_dots{
+    .slide__dots{
         margin-bottom: 22px;
     }
-    .slide_name{
-        font-size: 16px;
+    .slide__name{
+        @include font-line(16px, 1.625);
     }
-    .slide_gradient{
+    .slide__gradient{
+        background-image: repeating-linear-gradient(transparent  0.1px 27px, #E1E1E1 27px 28px,
+        transparent  28px 58px,#E1E1E1 58px 59px);
         padding-left: 19px;
         padding-right: 20px;
+        width: 524px;
     }
     #r1:checked ~ .s1 {
         margin-right: 0%;    
@@ -170,30 +167,35 @@
         padding-top: 123px;
         padding-bottom: 132px;
         .container{
-            padding-left: 178px;
-            padding-right: 176px;
+            padding-left: 0;
+            padding-right: 0;
+            width: 926px;
         }
     }
-    .slide_comment{
+    .slide::after{
+        bottom: 46px;
+    }
+    .slide__comment{
         width: 926px; 
         padding-top: 47px;
-        margin-bottom: 14px;
+        margin-bottom: 34px;
         padding-left: 59px;
         padding-right: 54px;
     }
-    .slide_gradient{
+    .slide__gradient{
         width: 813px;
         height: 60px;
         padding-left: 29px;
         padding-right: 33px;
     }
-    .slide_text{   
-        font-size: 16px;
-        line-height: 186%;
-        letter-spacing: 0.04em;
+    .slide__text{   
+        @include font-letter(16px, 1.875, 0.04em);
     }
-    .slide_dots{
+    .slide__dots{
         margin-bottom: 25px;
+    }
+    .slide__name{
+        @include font-line(20px, 1.85);
     }
 
     #r1:checked ~ .s1 {
