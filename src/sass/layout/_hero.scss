@@ -37,13 +37,11 @@
     width: 346px;
     height: 344px;
     position: absolute;
-    margin-bottom: 75px;
     top: 83px;
     left: 36px;
     @media screen and (min-width: $tablet) {
       width: 324px;
       height: 322px;
-      margin-bottom: 31px;
       top: 31px;
       left: 307px;
     }
@@ -133,11 +131,9 @@
     border: none;
     border-radius: 20px;
     padding: 7px 15px;
-    margin-right: 8px;
     @media screen and (min-width: $desktop) {
       min-width: 104px;
       min-height: 40px;
-      margin-right: 15px;
       padding: 11px 22px;
       font-size: 14px;
       line-height: 1.27;
@@ -150,10 +146,12 @@
   }
   &__link--made {
     min-width: 83px;
+    margin-left: 8px;
     color: getColor('accent-text-color');
     background-color: getColor('primary-text-color');
     @media screen and (min-width: $desktop) {
       min-width: 138px;
+      margin-left: 15px;
     }
     &:hover,
     &:focus {
@@ -222,12 +220,13 @@
   &__item::before {
     content: '';
     position: absolute;
+    right: 0;
     width: 16px;
     height: 16px;
     margin-right: -10px;
     background: getColor('primary-text-color');
     border-radius: 50%;
-    right: 0;
+
     @media screen and (min-width: $desktop) {
       width: 30px;
       height: 30px;
@@ -245,6 +244,7 @@
     }
   }
   &__subtext {
+    text-align: center;
     @include font-weight(400, 8px, 1.25);
     color: getColor('primary-text-color');
     @media screen and (min-width: $desktop) {

@@ -14,7 +14,6 @@
     @media screen and (min-width: $tablet) {
       margin-top: 37px;
       padding-left: 0;
-      padding-right: 0;
     }
   }
   &__menu {
@@ -99,10 +98,6 @@
     padding: 11px 53px;
   }
   &__button-buy__header {
-    margin-right: 34px;
-    @media screen and (min-width: $desktop) {
-      margin-right: 112px;
-    }
     @media screen and (max-width: 767.9px) {
       display: none;
     }
@@ -116,15 +111,15 @@
   z-index: 20;
   background: getColor('other-background-color1');
   padding-top: 60px;
-  padding-bottom: 171px;
   width: 250px;
+  height: 502px;
   transform: translateX(0);
   transition: transform 250ms linear;
   @media screen and (min-width: $tablet) {
     width: 254px;
+    height: 100%;
     right: 0;
     padding-top: 60px;
-    padding-bottom: 689px;
   }
   @media screen and (min-width: $desktop) {
     display: none;
