@@ -9,6 +9,3 @@ body {
   color: getColor('textColor');
   background-color: getColor('whiteColor');
 }
-body.modal-open {
-  overflow-y: hidden;
-}
