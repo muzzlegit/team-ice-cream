@@ -248,3 +248,15 @@
 .contact__button--icon {
   margin-left: 5px;
 }
+
+.contacts__link__fr {
+  font-family: DM Sans;
+  @include font(500, 12px, 1.5, 0em);
+  text-decoration: none;
+  text-align: left;
+  color: getColor('accent-text-color');
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 29px;
+  }
+}
