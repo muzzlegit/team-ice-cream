@@ -11,25 +11,26 @@
   @media screen and (min-width: $desktop) {
     height: 665px;
   }
+  &__container {
+    height: 100%;
+    position: relative;
+  }
   &__ice {
     position: absolute;
     width: 171px;
     height: 410px;
-    margin-left: 117px;
-    margin-top: 92px;
-    margin-right: 32px;
+    bottom: 0;
+    left: 117px;
     z-index: 2;
     @media screen and (min-width: $tablet) {
       width: 143px;
       height: 336px;
-      margin-left: 340px;
-      margin-top: 63px;
+      left: 378px;
     }
     @media screen and (min-width: $desktop) {
       width: 236px;
       height: 557px;
-      margin-left: 482px;
-      margin-top: 108px;
+      left: 594px;
     }
   }
   &__ellipse {
@@ -37,23 +38,20 @@
     height: 344px;
     position: absolute;
     margin-bottom: 75px;
-    margin-top: 83px;
-    margin-left: 36px;
+    top: 83px;
+    left: 36px;
     @media screen and (min-width: $tablet) {
       width: 324px;
       height: 322px;
       margin-bottom: 31px;
-      margin-right: 137px;
-      margin-top: 46px;
-      margin-left: 273px;
+      top: 31px;
+      left: 307px;
     }
     @media screen and (min-width: $desktop) {
       width: 538px;
       height: 538px;
-      margin-bottom: 52px;
-      margin-right: 267px;
-      margin-top: 75px;
-      margin-left: 363px;
+      top: 52px;
+      left: 475px;
     }
   }
   &__girl {
@@ -63,14 +61,13 @@
     width: 168px;
     height: 133px;
     position: absolute;
-    margin-top: 266px;
-    margin-left: 532px;
+    bottom: 0;
+    right: 34px;
     z-index: 6;
     @media screen and (min-width: $desktop) {
       width: 293px;
       height: 232px;
-      margin-top: 433px;
-      margin-left: 766px;
+      right: 109px;
     }
   }
   &__milk {
@@ -79,11 +76,12 @@
     }
     position: absolute;
     width: 124px;
-    margin-top: 245px;
+    bottom: 28px;
+    left: 34px;
     @media screen and (min-width: $desktop) {
       width: 188px;
-      margin-top: 429px;
-      margin-left: -35px;
+      bottom: 45px;
+      left: 77px;
     }
   }
   &__title {
@@ -208,14 +206,14 @@
     @media screen and (max-width: 767.9px) {
       display: none;
     }
-    margin-top: 94px;
-    margin-left: 649px;
     position: absolute;
+    right: 34px;
+    top: 94px;
     display: block;
     text-align: end;
     @media screen and (min-width: $desktop) {
-      margin-top: 156px;
-      margin-left: 979px;
+      right: 97px;
+      top: 156px;
     }
   }
 }
