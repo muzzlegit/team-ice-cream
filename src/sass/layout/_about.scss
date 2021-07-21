@@ -84,7 +84,6 @@
     }
   }
   &__container__section-title {
-    margin-top: 15px;
     margin-bottom: 351px;
 
     font-family: Titan One, sans-serif;
@@ -93,12 +92,10 @@
     color: getColor('accent-text-color');
 
     @media screen and (min-width: $tablet) {
-      margin-top: 16px;
       margin-bottom: 100px;
       @include font-letter(48px, 1.146, 0.04em);
     }
     @media screen and (min-width: $desktop) {
-      margin-top: 15px;
       margin-bottom: 106px;
       @include font-letter(58px, 1.138, 0.06em);
     }
