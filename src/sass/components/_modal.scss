@@ -120,7 +120,7 @@
     outline: none;
   }
   &__field:focus-within &__icon {
-    fill: getColor('accent-text-colo');
+    fill: getColor('accent-text-color');
   }
   &__icon {
     position: absolute;
@@ -166,13 +166,13 @@
     vertical-align: middle;
     @include font-line(12px, 1.67);
 
-    color: getColor('accent-text-colo');
+    color: getColor('accent-text-color');
     @media screen and(min-width:$desktop) {
       @include font-line(14px, 1.7);
     }
   }
   &__link:focus-within {
-    border: 1px solid getColor('accent-text-colo');
+    border: 1px solid getColor('accent-text-color');
     border-radius: 4px;
     outline: none;
   }
