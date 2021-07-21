@@ -43,13 +43,16 @@
 }
 .contacts__list {
   margin-top: -84px;
+  margin-bottom: 54px;
   @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
     margin-right: -20px;
+    margin-bottom: 81px;
   }
   @media screen and (min-width: $desktop) {
     margin-right: -30px;
+    margin-bottom: 86px;
   }
 }
 
@@ -179,7 +182,6 @@
   outline: none;
   @include dis-jc(flex, center, center);
   flex-direction: column;
-  padding-top: 54px;
   padding-bottom: 113px;
   cursor: pointer;
 
@@ -189,12 +191,10 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding-top: 81px;
     padding-bottom: 165px;
   }
 
   @media screen and (min-width: $desktop) {
-    margin-top: 86px;
     padding-bottom: 165px;
   }
 }
