@@ -1,12 +1,24 @@
+.modal1,
+.modal2,
+.modal3 {
+  background-image: none;
+  @media screen and (min-width: $tablet) {
+    height: 50vh;
+    .products-list__text--modal {
+      overflow-y: scroll;
+      height: 50%;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    width: 70%;
+  }
+}
 .modal1 {
   background-color: getColor('accent-background-color');
-  background-image: none;
 }
 .modal2 {
   background-color: getColor('other-background-color2');
-  background-image: none;
 }
 .modal3 {
   background-color: getColor('other-background-color3');
-  background-image: none;
 }
