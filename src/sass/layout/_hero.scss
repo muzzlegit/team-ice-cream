@@ -5,10 +5,10 @@
   margin-right: auto;
   background: getColor('accent-background-color');
   overflow: hidden;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     height: 399px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $desktop) {
     height: 665px;
   }
   &__ice {
@@ -19,13 +19,13 @@
     margin-top: 92px;
     margin-right: 32px;
     z-index: 2;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       width: 143px;
       height: 336px;
       margin-left: 340px;
       margin-top: 63px;
     }
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: $desktop) {
       width: 236px;
       height: 557px;
       margin-left: 482px;
@@ -39,7 +39,7 @@
     margin-bottom: 75px;
     margin-top: 83px;
     margin-left: 36px;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       width: 324px;
       height: 322px;
       margin-bottom: 31px;
@@ -47,7 +47,7 @@
       margin-top: 46px;
       margin-left: 273px;
     }
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: $desktop) {
       width: 538px;
       height: 538px;
       margin-bottom: 52px;
@@ -66,7 +66,7 @@
     margin-top: 266px;
     margin-left: 532px;
     z-index: 6;
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: $desktop) {
       width: 293px;
       height: 232px;
       margin-top: 433px;
@@ -80,7 +80,7 @@
     position: absolute;
     width: 124px;
     margin-top: 245px;
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: $desktop) {
       width: 188px;
       margin-top: 429px;
       margin-left: -35px;
@@ -94,11 +94,11 @@
     text-transform: uppercase;
     color: getColor('primary-text-color');
     z-index: 5;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       padding-top: 102px;
       @include font-line(22px, 1.136);
     }
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: $desktop) {
       padding-top: 171px;
       @include font-line(38px, 1.158);
     }
@@ -113,10 +113,10 @@
     margin-top: 19px;
     position: relative;
     z-index: 5;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       margin-top: 20px;
     }
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: $desktop) {
       margin-top: 25px;
     }
   }
@@ -136,7 +136,7 @@
     border-radius: 20px;
     padding: 7px 15px;
     margin-right: 8px;
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: $desktop) {
       min-width: 104px;
       min-height: 40px;
       margin-right: 15px;
@@ -154,7 +154,7 @@
     min-width: 83px;
     color: getColor('accent-text-color');
     background-color: getColor('primary-text-color');
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: $desktop) {
       min-width: 138px;
     }
     &:hover,
@@ -173,7 +173,7 @@
     font-family: DM Sans;
     @include font-weight(400, 8px, 1.5);
     color: getColor('primary-text-color');
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: $desktop) {
       width: 200px;
       margin-top: 112px;
       margin-left: 183px;
@@ -197,7 +197,7 @@
     &:focus {
       background: getColor('btn-hover');
     }
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: $desktop) {
       width: 20px;
       height: 20px;
       margin-top: 20px;
@@ -213,7 +213,7 @@
     position: absolute;
     display: block;
     text-align: end;
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: $desktop) {
       margin-top: 156px;
       margin-left: 979px;
     }
@@ -230,7 +230,7 @@
     background: getColor('primary-text-color');
     border-radius: 50%;
     right: 0;
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: $desktop) {
       width: 30px;
       height: 30px;
       margin-right: -18px;
@@ -242,15 +242,14 @@
     @include font(400, 28px, 1.14, 0.04em);
     text-transform: uppercase;
     color: getColor('accent-text-color');
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: $desktop) {
       @include font-line(46px, 1.15);
     }
   }
   &__subtext {
     @include font-weight(400, 8px, 1.25);
-
     color: getColor('primary-text-color');
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: $desktop) {
       @include font-line(14px, 1.28);
     }
   }
