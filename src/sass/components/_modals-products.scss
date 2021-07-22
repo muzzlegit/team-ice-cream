@@ -1,18 +1,28 @@
 .modal1,
 .modal2,
 .modal3 {
+  padding: 10px;
+  // height: 90vh;
   background-image: none;
+  .products-list__card-title--modal {
+    padding-top: 15px;
+  }
+  .products-list__text--modal {
+    padding: 10px;
+    font-weight: normal;
+  }
   @media screen and (min-width: $tablet) {
     height: 50vh;
     .products-list__text--modal {
-      overflow-y: scroll;
-      height: 50%;
+      overflow-y: auto;
+      height: auto;
     }
   }
   @media screen and (min-width: $desktop) {
     width: 70%;
   }
 }
+
 .modal1 {
   background-color: getColor('accent-background-color');
 }
