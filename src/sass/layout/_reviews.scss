@@ -11,7 +11,7 @@
 .slider{
     display: flex;
     overflow: hidden;
-    margin-bottom: 30px;
+    margin-bottom: 42px;
 }
 
 .slides{
@@ -100,6 +100,10 @@
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
 }
 
 #r1:checked ~ .s1 {
@@ -111,6 +115,33 @@
 #r3:checked ~ .s1 {
     margin-left: -560px;
 }
+#r1:checked ~ .slider__switch .ellipse-1 {
+    display: none;
+}   
+#r1:checked ~ .slider__switch .home-2{
+    display: none;
+}   
+#r1:checked ~ .slider__switch .home-3{
+    display: none;
+}  
+#r2:checked ~ .slider__switch .home-1 {
+    display: none;
+}   
+#r2:checked ~ .slider__switch .home-3 {
+    display: none;
+}   
+#r2:checked ~ .slider__switch .ellipse-2 {
+    display: none;
+}   
+#r3:checked ~ .slider__switch .home-1 {
+    display: none;
+}   
+#r3:checked ~ .slider__switch .home-2 {
+    display: none;
+}   
+#r3:checked ~ .slider__switch .ellipse-3 {
+    display: none;
+}   
 
 @media screen and (min-width:$tablet) {
     .customer-reviews{
@@ -121,7 +152,7 @@
         }
     }
     .slider{
-        margin-bottom: 35px;
+        margin-bottom: 47px;
     }
     .slide::after{
         bottom: 39px;
@@ -199,10 +230,10 @@
     .slide__name{
         @include font-line(20px, 1.85);
     }
-
+    
     #r1:checked ~ .s1 {
-        margin-right: 0%;    
-    }
+        margin-right: 0%; 
+    } 
     #r2:checked ~ .s1 {
         margin-left: -924px;
     }
